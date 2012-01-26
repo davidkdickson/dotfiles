@@ -1,0 +1,10 @@
+alias g='git'
+alias gs='git status'
+alias ga='git add .'
+alias gcm='git commit -m'
+alias gcam='git commit -am'
+alias gp='git push'
+
+concise_logging_format='--pretty=format:%Cblue%h%Creset %cr %Cgreen%an%Creset %s'
+alias glc='git log "$concise_logging_format"'
+alias glcg='glc --graph'

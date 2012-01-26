@@ -1,0 +1,16 @@
+# meta
+alias reload='source ~/.dot-files/.zshrc'
+alias ea='sublime ~/.dot-files/.aliases/aliases'
+alias ee='sublime ~/.dot-files/.zsh/env'
+alias cc='sublime ~/.dot-files/.zsh/commands'
+alias ega='sublime ~/.dot-files/.aliases/git'
+
+# utility
+alias a='ls -A' # -A all except literal . ..
+alias la="ls -A -l -G"
+alias c='clear'
+
+# projects
+alias oc='cd ~/projects/opportunity-cost'
+alias k2='cd ~/projects/eagleboys/k2'
+alias k2data='cd ~/projects/eagleboys/k2data'
