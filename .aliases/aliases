@@ -4,6 +4,8 @@ alias ea='sublime ~/.dot-files/.aliases/aliases'
 alias ee='sublime ~/.dot-files/.zsh/env'
 alias cc='sublime ~/.dot-files/.zsh/commands'
 alias ega='sublime ~/.dot-files/.aliases/git'
+alias ehga='sublime ~/.dot-files/.aliases/hg'
+alias erc='sublime ~/.dot-files/.zshrc'
 
 # utility
 alias a='ls -A' # -A all except literal . ..
