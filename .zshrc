@@ -35,3 +35,4 @@ source ~/.dot-files/.zsh/env
 source ~/.dot-files/.zsh/commands
 source ~/.dot-files/.aliases/aliases
 source ~/.dot-files/.aliases/git
+source ~/.dot-files/.aliases/hg

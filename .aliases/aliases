@@ -2,7 +2,7 @@
 alias reload='source ~/.dot-files/.zshrc'
 alias ea='sublime ~/.dot-files/.aliases/aliases'
 alias ee='sublime ~/.dot-files/.zsh/env'
-alias cc='sublime ~/.dot-files/.zsh/commands'
+alias ec='sublime ~/.dot-files/.zsh/commands'
 alias ega='sublime ~/.dot-files/.aliases/git'
 alias ehga='sublime ~/.dot-files/.aliases/hg'
 alias erc='sublime ~/.dot-files/.zshrc'
@@ -14,5 +14,9 @@ alias c='clear'
 
 # projects
 alias oc='cd ~/projects/opportunity-cost'
+alias ocs='cygstart devenv.exe $(cygpath -w ~/projects/opportunity-cost/AppHarbor.sln)'
+alias ocrw='powershell -ExecutionPolicy Unrestricted ./ResetTheWorld.ps1'
+
 alias k2='cd ~/projects/eagleboys/k2'
 alias k2data='cd ~/projects/eagleboys/k2data'
+alias k2rw='cygstart ~/projects/eagleboys/k2/src/ResetTheWorld.bat'

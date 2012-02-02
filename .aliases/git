@@ -1,11 +1,22 @@
 alias g='git'
 alias gs='git status'
-alias ga='git add .'
+alias ga='git add'
 alias gaa='git add -A'
 alias gcm='git commit -m'
 alias gcam='git commit -am'
-alias gp='git push'
+alias gcamm='git commit -v -a --amend'
+function gg() { 
+    git commit -v -a -m "$*"
+}
+alias gps='git push'
+alias gpl='git pull'
 
 concise_logging_format='--pretty=format:%Cblue%h%Creset %cr %Cgreen%an%Creset %s'
 alias glc='git log "$concise_logging_format"'
 alias glcg='glc --graph'
+alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
+alias gl='glog --graph'
+
+alias gco='git checkout'
+
+alias gb='git branch'

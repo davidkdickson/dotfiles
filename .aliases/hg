@@ -1,0 +1,12 @@
+alias hgs='hg status'
+alias hgpl='hg pull'
+function hgg() {
+	hg commit -m $*
+}
+alias hgl='hg log'
+alias hggl='hg glog --style compact'
+function hgam() {
+	hg rollback
+	hgcm $*
+}
+alias hgps='hg push'
