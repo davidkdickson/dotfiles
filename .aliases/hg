@@ -3,6 +3,11 @@ alias hgpl='hg pull'
 function hgg() {
 	hg commit -m $*
 }
+
+function hgac() {	
+	hg commit -m -A $*	
+}
+
 alias hgl='hg log'
 alias hggl='hg glog --style compact'
 function hgam() {
@@ -10,3 +15,5 @@ function hgam() {
 	hgcm $*
 }
 alias hgps='hg push'
+alias hgc='hg update -C'
+alias hgo='hg outgoing'

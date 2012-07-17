@@ -1,7 +1,6 @@
 alias g='git'
 alias gs='git status'
-alias ga='git add'
-alias gaa='git add -A'
+alias ga='git add -A .'
 alias gcm='git commit -m'
 alias gcam='git commit -am'
 alias gcamm='git commit -v -a --amend'
@@ -20,3 +19,7 @@ alias gl='glog --graph'
 alias gco='git checkout'
 
 alias gb='git branch'
+
+# git tfs
+alias gtpl='git tfs pull'
+alias gtc='git tfs checkintool'

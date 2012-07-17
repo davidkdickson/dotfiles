@@ -16,7 +16,15 @@ alias c='clear'
 alias oc='cd ~/projects/opportunity-cost'
 alias ocs='cygstart devenv.exe $(cygpath -w ~/projects/opportunity-cost/AppHarbor.sln)'
 alias ocrw='powershell -ExecutionPolicy Unrestricted ./ResetTheWorld.ps1'
+alias ocpd='powershell -ExecutionPolicy Unrestricted ./PopulateDb.ps1'
 
 alias k2='cd ~/projects/eagleboys/k2'
+alias k2s='cygstart devenv.exe $(cygpath -w ~/projects/eagleboys/k2/src/k2.sln)'
 alias k2data='cd ~/projects/eagleboys/k2data'
 alias k2rw='cygstart ~/projects/eagleboys/k2/src/ResetTheWorld.bat'
+
+alias vh='cd ~/projects/mater/vhma'
+
+alias ir='cd /cygdrive/c/DET/ERS/Trunk'
+
+alias lr='cd /cygdrive/c/Users/David/projects/lucidrate'
