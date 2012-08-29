@@ -23,3 +23,5 @@ alias gb='git branch'
 # git tfs
 alias gtpl='git tfs pull'
 alias gtc='git tfs checkintool'
+
+alias gdisc='git checkout -- .'

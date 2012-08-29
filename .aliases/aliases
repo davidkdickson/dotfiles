@@ -26,5 +26,8 @@ alias k2rw='cygstart ~/projects/eagleboys/k2/src/ResetTheWorld.bat'
 alias vh='cd ~/projects/mater/vhma'
 
 alias ir='cd /cygdrive/c/DET/ERS/Trunk'
+alias hr='cd /cygdrive/c/DET/Hrui/Trunk'
 
 alias lr='cd /cygdrive/c/Users/David/projects/lucidrate'
+
+alias ..='cd ..'
