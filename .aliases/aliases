@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # meta
 alias reload='source ~/.dot-files/.zshrc'
 alias ea='subl ~/.dot-files/.aliases/aliases'
@@ -10,4 +11,5 @@ alias erc='subl ~/.dot-files/.zshrc'
 alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
+alias ..='cd ..'
 # projects
