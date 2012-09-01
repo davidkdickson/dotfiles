@@ -1,30 +1,13 @@
 # meta
 alias reload='source ~/.dot-files/.zshrc'
-alias ea='sublime ~/.dot-files/.aliases/aliases'
-alias ee='sublime ~/.dot-files/.zsh/env'
-alias ec='sublime ~/.dot-files/.zsh/commands'
-alias ega='sublime ~/.dot-files/.aliases/git'
-alias ehga='sublime ~/.dot-files/.aliases/hg'
-alias erc='sublime ~/.dot-files/.zshrc'
-
+alias ea='subl ~/.dot-files/.aliases/aliases'
+alias ee='subl ~/.dot-files/.zsh/env'
+alias ec='subl ~/.dot-files/.zsh/commands'
+alias ega='subl ~/.dot-files/.aliases/git'
+alias ehga='subl ~/.dot-files/.aliases/hg'
+alias erc='subl ~/.dot-files/.zshrc'
 # utility
 alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
-
 # projects
-alias oc='cd ~/projects/opportunity-cost'
-alias ocs='cygstart devenv.exe $(cygpath -w ~/projects/opportunity-cost/AppHarbor.sln)'
-alias ocrw='powershell -ExecutionPolicy Unrestricted ./ResetTheWorld.ps1'
-alias ocpd='powershell -ExecutionPolicy Unrestricted ./PopulateDb.ps1'
-
-alias k2='cd ~/projects/eagleboys/k2'
-alias k2s='cygstart devenv.exe $(cygpath -w ~/projects/eagleboys/k2/src/k2.sln)'
-alias k2data='cd ~/projects/eagleboys/k2data'
-alias k2rw='cygstart ~/projects/eagleboys/k2/src/ResetTheWorld.bat'
-
-alias vh='cd ~/projects/mater/vhma'
-
-alias ir='cd /cygdrive/c/DET/ERS/Trunk'
-
-alias lr='cd /cygdrive/c/Users/David/projects/lucidrate'
