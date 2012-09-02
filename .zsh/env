@@ -1,3 +1,1 @@
-# export PATH=:$PATH
-
-ssh-add ~/.ssh/id_rsa
+export PATH=~/Library/Haskell/bin:$PATH
