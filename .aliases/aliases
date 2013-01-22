@@ -1,17 +1,16 @@
 # meta
 alias reload='source ~/.dot-files/.zshrc'
-alias ea='sublime ~/.dot-files/.aliases/aliases'
-alias ee='sublime ~/.dot-files/.zsh/env'
-alias ec='sublime ~/.dot-files/.zsh/commands'
-alias ega='sublime ~/.dot-files/.aliases/git'
-alias ehga='sublime ~/.dot-files/.aliases/hg'
-alias erc='sublime ~/.dot-files/.zshrc'
-
+alias ea='subl ~/.dot-files/.aliases/aliases'
+alias ee='subl ~/.dot-files/.zsh/env'
+alias ec='subl ~/.dot-files/.zsh/commands'
+alias ega='subl ~/.dot-files/.aliases/git'
+alias ehga='subl ~/.dot-files/.aliases/hg'
+alias erc='subl ~/.dot-files/.zshrc'
 # utility
 alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
-
+alias ..='cd ..'
 # projects
 
 alias iw='cd ~/projects/iworkitout'

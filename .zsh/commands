@@ -1,3 +1,0 @@
-sublime() {	
-	sublime_text $(cygpath -w $1) &
-}

@@ -9,18 +9,11 @@ function gg() {
 }
 alias gps='git push'
 alias gpl='git pull'
-
 concise_logging_format='--pretty=format:%Cblue%h%Creset %cr %Cgreen%an%Creset %s'
 alias glc='git log "$concise_logging_format"'
 alias glcg='glc --graph'
 alias glog='git log --pretty="format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset"'
 alias gl='glog --graph'
 alias glf='gl --name-status'
-
 alias gco='git checkout'
-
 alias gb='git branch'
-
-# git tfs
-alias gtpl='git tfs pull'
-alias gtc='git tfs checkintool'
