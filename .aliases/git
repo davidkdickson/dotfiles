@@ -4,7 +4,7 @@ alias ga='git add -A .'
 alias gcm='git commit -m'
 alias gcam='git commit -am'
 alias gcamm='git commit -v -a --amend'
-function gg() { 
+function gg() {
     git commit -v -a -m "$*"
 }
 alias gps='git push'
@@ -17,3 +17,5 @@ alias gl='glog --graph'
 alias glf='gl --name-status'
 alias gco='git checkout'
 alias gb='git branch'
+
+alias gdt='git difftool'
