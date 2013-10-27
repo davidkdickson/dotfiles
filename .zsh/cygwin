@@ -1,5 +1,5 @@
 export EDITOR="sublime"
-export PATH=/cygdrive/c/cygwin/bin:/cygdrive/c/Program\ Files/Sublime\ Text\ 2/:/cygdrive/c/cygwin/lib/git-core:$PATH
+export PATH=/cygdrive/c/cygwin/bin:/cygdrive/c/Program\ Files/Sublime\ Text\ 3/:$PATH
 
 ## only ask for my SSH key passphrase once!
 #use existing ssh-agent if possible
@@ -11,6 +11,6 @@ if [ -z "$SSH_AGENT_PID" -o -z "`/usr/bin/ps -a|/usr/bin/egrep \"^[ ]+$SSH_AGENT
    . ${HOME}/.ssh-agent > /dev/null
 fi
 
-sublime() {	
-	sublime_text $(cygpath -w $1) &
+subl() {	
+	sublime_text $1 &
 }

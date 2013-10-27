@@ -11,6 +11,3 @@ alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
 alias ..='cd ..'
-# projects
-
-alias iw='cd ~/projects/iworkitout'
