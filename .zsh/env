@@ -1,1 +1,1 @@
-export PATH=~/Library/Haskell/bin:$PATH
+export PATH=~/bin:$PATH

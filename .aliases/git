@@ -7,6 +7,7 @@ alias gcamm='git commit -v -a --amend'
 function gg() {
     git commit -v -a -m "$*"
 }
+alias gpom='git push origin master'
 alias gps='git push'
 alias gpl='git pull'
 concise_logging_format='--pretty=format:%Cblue%h%Creset %cr %Cgreen%an%Creset %s'
