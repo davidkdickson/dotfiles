@@ -11,3 +11,26 @@ alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
 alias ..='cd ..'
+
+# projects
+alias comp='cd ~/work/compass'
+alias ccore='cd ~/work/compasscore'
+alias chub='cd ~/work/compascorehub'
+alias cshared='cd ~/work/compasshared'
+
+
+
+function listening_port {
+	lsof -n -i4TCP:$1 | grep LISTEN
+}
+
+function postgres {		
+	if [[ $1 == 'start' ]]; then
+		pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+	fi
+
+	if [[ $1 == 'stop' ]]; then
+		pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop		
+	fi
+}
+
