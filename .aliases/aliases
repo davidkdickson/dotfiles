@@ -4,8 +4,8 @@ alias ea='subl ~/.dot-files/.aliases/aliases'
 alias ee='subl ~/.dot-files/.zsh/env'
 alias ec='subl ~/.dot-files/.zsh/commands'
 alias ega='subl ~/.dot-files/.aliases/git'
-alias ehga='subl ~/.dot-files/.aliases/hg'
 alias erc='subl ~/.dot-files/.zshrc'
+
 # utility
 alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
