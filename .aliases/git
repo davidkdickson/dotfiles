@@ -1,5 +1,5 @@
 alias g='git'
-alias gs='git status'
+alias gs='git status -s'
 alias ga='git add -A .'
 alias gcm='git commit -m'
 alias gcam='git commit -am'

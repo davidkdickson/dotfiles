@@ -13,10 +13,14 @@ alias c='clear'
 alias ..='cd ..'
 
 # projects
-alias comp='cd ~/work/compass'
-alias ccore='cd ~/work/compasscore'
-alias chub='cd ~/work/compascorehub'
-alias cshared='cd ~/work/compasshared'
+alias comp='cd ~/Work/Compass'
+alias ccore='cd ~/Work/Compass/CompassCore'
+alias chub='cd ~/Work/Compass/CompassCoreHub'
+alias cshared='cd ~/Work/Compass/compassshared'
+alias e-scripts='atom ~/Scripts'
+
+# test
+alias t='bundle exec rspec'
 
 
 
@@ -34,3 +38,6 @@ function postgres {
 	fi
 }
 
+function gg() {
+    git commit -v -a -m "$*"
+}
