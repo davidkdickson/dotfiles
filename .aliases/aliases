@@ -1,10 +1,10 @@
 # meta
 alias reload='source ~/.dot-files/.zshrc'
-alias ea='subl ~/.dot-files/.aliases/aliases'
-alias ee='subl ~/.dot-files/.zsh/env'
-alias ec='subl ~/.dot-files/.zsh/commands'
-alias ega='subl ~/.dot-files/.aliases/git'
-alias erc='subl ~/.dot-files/.zshrc'
+alias ea='atom ~/.dot-files/.aliases/aliases'
+alias ee='atom ~/.dot-files/.zsh/env'
+alias ec='atom ~/.dot-files/.zsh/commands'
+alias ega='atom ~/.dot-files/.aliases/git'
+alias erc='atom ~/.dot-files/.zshrc'
 
 # utility
 alias a='ls -A' # -A all except literal . ..
@@ -18,6 +18,7 @@ alias ccore='cd ~/Work/Compass/CompassCore'
 alias chub='cd ~/Work/Compass/CompassCoreHub'
 alias cshared='cd ~/Work/Compass/compassshared'
 alias e-scripts='atom ~/Scripts'
+alias blog='cd ~/Workspace/Projects/davidkdickson.github.io'
 
 # test
 alias t='bundle exec rspec'
@@ -28,16 +29,12 @@ function listening_port {
 	lsof -n -i4TCP:$1 | grep LISTEN
 }
 
-function postgres {		
+function postgres {
 	if [[ $1 == 'start' ]]; then
 		pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 	fi
 
 	if [[ $1 == 'stop' ]]; then
-		pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop		
+		pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop
 	fi
-}
-
-function gg() {
-    git commit -v -a -m "$*"
 }
