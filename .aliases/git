@@ -9,14 +9,15 @@ alias gl='git log --oneline --decorate --all --graph'
 alias gs='git status -s'
 
 # add add changes from all tracked and untracked files
-alias ga='git add -all .'
+alias ga='git add --all .'
+
+# merge without fast forwarding
+alias gm='git merge --no-ff'
+
 alias gcm='git commit -m'
 alias gcam='git commit -am'
 alias gcamm='git commit -v -a --amend'
-alias gpom='git push origin master'
 alias gps='git push'
 alias gpl='git pull'
 alias gco='git checkout'
 alias gb='git branch'
-
-alias gdt='git difftool'
