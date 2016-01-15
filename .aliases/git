@@ -4,6 +4,7 @@ alias g='git'
 
 # logs
 alias gl='git log --oneline --decorate --all --graph'
+alias gll='gl --numstat'
 
 # status in short format
 alias gs='git status -s'
