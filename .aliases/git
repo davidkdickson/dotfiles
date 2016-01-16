@@ -15,10 +15,13 @@ alias ga='git add --all .'
 # merge without fast forwarding
 alias gm='git merge --no-ff'
 
+# branches
+alias gb='git branch'
+alias gbl='git branch --all'
+
 alias gcm='git commit -m'
 alias gcam='git commit -am'
 alias gcamm='git commit -v -a --amend'
 alias gps='git push'
 alias gpl='git pull'
 alias gco='git checkout'
-alias gbr='git branch'
