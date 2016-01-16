@@ -19,9 +19,18 @@ alias gm='git merge --no-ff'
 alias gb='git branch'
 alias gbl='git branch --all'
 
+# commiting
 alias gcm='git commit -m'
-alias gcam='git commit -am'
+
+# ammending
 alias gcamm='git commit -v -a --amend'
+
+# pusing
 alias gps='git push'
-alias gpl='git pull'
+
+# pulling
+alias gpl ='git pull'
+
+# checking out
 alias gco='git checkout'
+alias gcob='git checkout -b'
