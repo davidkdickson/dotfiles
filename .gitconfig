@@ -1,0 +1,50 @@
+[user]
+  name = David Dickson
+  email = davidkdickson@gmail.com
+[core]
+  excludesfile = /Users/daviddickson/.gitignore_global
+[color]
+  ui = true
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+  tool = Kaleidoscope
+[difftool]
+  prompt = false
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[mergetool]
+  prompt = false
+[merge]
+  tool = Kaleidoscope
+[push]
+  default = tracking
+[alias]
+	# log
+	l = log --oneline --decorate --all --graph
+	ll = log --oneline --decorate --all --graph --numstat
+	lp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+	# status in short format
+	s = status -s
+
+	# add all changes from tracked and untracked
+	a = add --all .
+
+	# merge without fast forwarding
+	m = merge --no-ff
+
+	# branches
+	b = branch
+	bl = branch --all
+
+	# committing
+	cm = commit -m
+	cam = commit -v -a --amend
+
+	ps = push
+	pl = pull
+
+	co = checkout
+	cob = checkout -b
