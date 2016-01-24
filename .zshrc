@@ -25,14 +25,13 @@ ZSH_THEME="steeef"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
 source ~/.dot-files/.zsh/env
-source ~/.dot-files/.zsh/commands
+
 source ~/.dot-files/.aliases/aliases
 source ~/.dot-files/.aliases/git
 export PATH=~/.rbenv/shims:/usr/local/sbin:$PATH

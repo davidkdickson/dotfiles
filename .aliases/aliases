@@ -4,7 +4,6 @@
 alias reload='source ~/.dot-files/.zshrc'
 alias ea='atom ~/.dot-files/.aliases/aliases'
 alias ee='atom ~/.dot-files/.zsh/env'
-alias ec='atom ~/.dot-files/.zsh/commands'
 alias ega='atom ~/.dot-files/.aliases/git'
 alias erc='atom ~/.dot-files/.zshrc'
 
@@ -24,8 +23,6 @@ alias blog='cd ~/Workspace/Projects/davidkdickson.github.io'
 
 # test
 alias t='bundle exec rspec'
-
-
 
 function listening_port {
 	lsof -n -i4TCP:$1 | grep LISTEN

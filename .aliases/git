@@ -1,36 +1,9 @@
-#!/bin/zsh
+#!/bin/#!/usr/bin/env zsh
+IFS=$'\n'
 
-alias g='git'
-
-# logs
-alias gl='git log --oneline --decorate --all --graph'
-alias gll='gl --numstat'
-
-# status in short format
-alias gs='git status -s'
-
-# add add changes from all tracked and untracked files
-alias ga='git add --all .'
-
-# merge without fast forwarding
-alias gm='git merge --no-ff'
-
-# branches
-alias gb='git branch'
-alias gbl='git branch --all'
-
-# commiting
-alias gcm='git commit -m'
-
-# ammending
-alias gcamm='git commit -v -a --amend'
-
-# pusing
-alias gps='git push'
-
-# pulling
-alias gpl ='git pull'
-
-# checking out
-alias gco='git checkout'
-alias gcob='git checkout -b'
+# automatically load git aliases.
+for al in `git config --get-regexp alias | cut -c 7-`; do
+  gital=$(echo $al | awk '{print $1}')
+  gitcmd=$(echo $al | awk '{$1=""; print substr($0,2)}')
+  alias g$gital="git $gitcmd"
+done
