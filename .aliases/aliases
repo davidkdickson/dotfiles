@@ -13,13 +13,15 @@ alias la="ls -A -l -G"
 alias c='clear'
 alias ..='cd ..'
 
-# projects
+# projects Compass
 alias comp='cd ~/Work/Compass'
 alias ccore='cd ~/Work/Compass/CompassCore'
 alias chub='cd ~/Work/Compass/CompassCoreHub'
 alias cshared='cd ~/Work/Compass/compassshared'
+
+alias dot-files='atom ~/.dot-files'
 alias e-scripts='atom ~/Scripts'
-alias blog='cd ~/Workspace/Projects/davidkdickson.github.io'
+alias blog='atom ~/Workspace/Projects/davidkdickson.github.io'
 
 # test
 alias t='bundle exec rspec'
