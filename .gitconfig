@@ -43,7 +43,9 @@
 	cm = commit -m
 	cam = commit -v -a --amend
 
+  # push
 	ps = push
+  pg = !echo 'Ah push it' && git push origin && echo 'PUSH IT REAL GOOD' 
 	pl = pull
 
 	co = checkout
