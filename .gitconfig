@@ -22,15 +22,15 @@
   default = tracking
 [alias]
 	# log
-	l = log --oneline --decorate --all --graph
-	ll = log --oneline --decorate --all --graph --numstat
-	lp = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	l = log --graph --all --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
+  ll = l --stat
 
 	# status in short format
 	s = status -s
 
 	# add all changes from tracked and untracked
-	a = add --all .
+  a = add
+  aa = add --all .
 
 	# merge without fast forwarding
 	m = merge --no-ff
@@ -48,3 +48,6 @@
 
 	co = checkout
 	cob = checkout -b
+
+  d = diff
+  dc = d --cached
