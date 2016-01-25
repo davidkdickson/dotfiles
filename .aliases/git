@@ -8,4 +8,4 @@ for al in `git config --get-regexp alias | cut -c 7-`; do
   alias g$gital="git $gitcmd"
 done
 
-# alias gpg='echo $fg[magenta]"Push it..." $reset_color && git push && echo $fg[cyan]"PUSH IT REAL GOOD!"'
+alias gpg='echo $fg[magenta]"Push it..." $reset_color && git push && echo $fg[cyan]"PUSH IT REAL GOOD!"'

@@ -21,34 +21,34 @@
 [push]
   default = tracking
 [alias]
-	# log
-	l = log --graph --all --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
+  # log
+  l = log --graph --all --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
   ll = l --stat
 
-	# status in short format
-	s = status -s
+  # status in short format
+  s = status -s
 
-	# add all changes from tracked and untracked
+  # add all changes from tracked and untracked
   a = add
   aa = add --all .
 
-	# merge without fast forwarding
-	m = merge --no-ff
+  # merge without fast forwarding
+  m = merge --no-ff
 
-	# branches
-	b = branch
-	bl = branch --all
+  # branches
+  b = branch
+  bl = branch --all
 
-	# committing
-	cm = commit -m
-	cam = commit -v -a --amend
+  # committing
+  cm = commit -m
+  cam = commit -v -a --amend
 
   # push
   ps = push
-	pl = pull
+  pl = pull
 
-	co = checkout
-	cob = checkout -b
+  co = checkout
+  cob = checkout -b
 
   d = diff
   dc = d --cached
