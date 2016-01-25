@@ -53,3 +53,6 @@
 
   d = diff
   dc = d --cached
+
+  # list aliases
+  ls = config --get-regexp alias | cut -c 7-
