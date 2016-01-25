@@ -7,3 +7,5 @@ for al in `git config --get-regexp alias | cut -c 7-`; do
   gitcmd=$(echo $al | awk '{$1=""; print substr($0,2)}')
   alias g$gital="git $gitcmd"
 done
+
+alias gpg='echo "Push it..." && git push && echo "PUSH IT REAL GOOD!"'
