@@ -44,7 +44,7 @@
 	cam = commit -v -a --amend
 
   # push
-	ps = !echo $fg[magenta]"Push it..." $reset_color && git push && echo $fg[cyan]"PUSH IT REAL GOOD!"
+  ps = push
 	pl = pull
 
 	co = checkout
