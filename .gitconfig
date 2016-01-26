@@ -47,7 +47,10 @@
 
   # push
   ps = push
+
+  # pull
   pl = pull
+  plr = l --rebase
 
   co = checkout
   cob = checkout -b
