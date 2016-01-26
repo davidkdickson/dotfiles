@@ -23,6 +23,7 @@
 [alias]
   # log
   l = log --graph --all --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
+  lna = log --graph --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
   ll = l --stat
 
   # status in short format
@@ -34,6 +35,7 @@
 
   # merge without fast forwarding
   m = merge --no-ff
+  mnc = m --no-commit
 
   # branches
   b = branch
