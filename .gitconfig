@@ -30,8 +30,8 @@
   s = status -s
 
   # add all changes from tracked and untracked
-  a = add
-  aa = add --all .
+  a = add --all .
+  aa = add
 
   # merge without fast forwarding
   m = merge --no-ff
@@ -53,6 +53,7 @@
   cob = checkout -b
 
   d = diff
+  dt = difftool
   dc = d --cached
 
   # list aliases
