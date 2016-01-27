@@ -40,6 +40,9 @@
   # branches
   b = branch
   bl = branch --all
+  bd = branch -d
+  merged = b --merged
+  nomerge = b --no-merge
 
   # committing
   cm = commit -m
@@ -50,7 +53,7 @@
 
   # pull
   pl = pull
-  plr = l --rebase
+  plr = pull --rebase
 
   co = checkout
   cob = checkout -b
