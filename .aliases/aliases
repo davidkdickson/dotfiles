@@ -13,13 +13,6 @@ alias la="ls -A -l -G"
 alias c='clear'
 alias ..='cd ..'
 
-# projects Compass
-alias comp='cd ~/Work/Compass'
-alias ccore='cd ~/Work/Compass/CompassCore'
-alias chub='cd ~/Work/Compass/CompassCoreHub'
-alias cshared='cd ~/Work/Compass/compassshared'
-alias cscheduler='cd ~/Work/Compass/CompassScheduler'
-
 alias dot-files='atom ~/.dot-files'
 alias e-scripts='atom ~/Scripts'
 alias blog='atom ~/Workspace/Projects/davidkdickson.github.io'
