@@ -30,7 +30,7 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.dot-files/.zsh/env
 source ~/.dot-files/.aliases/aliases
-source ~/.dot-files/.aliases/aliases
+source ~/.dot-files/.aliases/projects
 source ~/.dot-files/.aliases/git
 export PATH=~/.rbenv/shims:/usr/local/sbin:$PATH
 
