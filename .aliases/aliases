@@ -16,6 +16,9 @@ alias ..='cd ..'
 alias dot-files='atom ~/.dot-files'
 alias e-scripts='atom ~/Scripts'
 alias blog='atom ~/Workspace/Projects/davidkdickson.github.io'
+alias todo-personal='atom ~/Desktop/todo/todo_personal'
+alias todo-work='atom ~/Desktop/todo/todo_work'
+alias todo='vim -O ~/Desktop/todo/todo_personal ~/Desktop/todo/todo_work'
 
 # test
 alias t='bundle exec rspec'
