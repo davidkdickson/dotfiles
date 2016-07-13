@@ -50,6 +50,7 @@
 
   # push
   ps = push
+  psu = git push --set-upstream origin
 
   # pull
   pl = pull
