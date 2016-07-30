@@ -10,18 +10,18 @@ pid=$(lsof -i:9000 -t); kill -TERM $pid || kill -KILL $pid
 pid=$(lsof -i:9001 -t); kill -TERM $pid || kill -KILL $pid
 pid=$(lsof -i:6379 -t); kill -TERM $pid || kill -KILL $pid
 
-redis-server stop
-
 tmux has-session -t ${SESSION_NAME}
 
 if [ $? != 0 ]
 then
   cd ~/Work/Compass/CompassCore
+  git checkout development
   tmux new -s ${SESSION_NAME} -d
   tmux split-window -v -p 30
   tmux split-window -h
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
+  tmux send-keys -t 2 'gulp build --gulpfile ./core.client/gulpfile.js' C-m
   tmux send-keys -t 2 'gulp build --gulpfile ./core.client/gulpfile.js' C-m
   tmux send-keys -t 2 'bundle install' C-m
   tmux send-keys -t 2 'rackup' C-m
@@ -29,6 +29,7 @@ then
   tmux rename-window 'Core'
 
   cd ~/Work/Compass/CompassReporting
+  git checkout development
   tmux new-window
   tmux split-window -v -p 30
   tmux split-window -h
@@ -39,6 +40,7 @@ then
   tmux send-keys -t 1 'git status' C-m
 
   cd ~/Work/Compass/LtvService
+  git checkout development
   tmux new-window
   tmux split-window -v -p 30
   tmux split-window -h
