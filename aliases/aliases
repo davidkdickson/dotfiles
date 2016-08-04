@@ -12,7 +12,7 @@ alias la="ls -A -l -G"
 alias c='clear'
 alias ..='cd ..'
 
-alias dot-files='cd ./dot-files; vim'
+alias dot-files='cd ~/.dot-files; vim'
 alias e-scripts='cd ~/Work/Compass/sql-scripts; vim'
 alias blog='cd ~/Workspace/Projects/davidkdickson.github.io; vim'
 alias todo-personal='cd ~/Desktop/todo/todo_personal; vim '
