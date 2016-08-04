@@ -25,6 +25,7 @@ then
   tmux send-keys -t 2 'gulp build --gulpfile ./core.client/gulpfile.js' C-m
   tmux send-keys -t 2 'bundle install' C-m
   tmux send-keys -t 2 'rackup' C-m
+  tmux send-keys -t 1 'git fetch' C-m
   tmux send-keys -t 1 'git status' C-m
   tmux rename-window 'Core'
 
@@ -37,6 +38,7 @@ then
   tmux send-keys -t 0 'vim' C-m
   tmux send-keys -t 2 'bundle install' C-m
   tmux send-keys -t 2 'rackup' C-m
+  tmux send-keys -t 1 'git fetch' C-m
   tmux send-keys -t 1 'git status' C-m
 
   cd ~/Work/Compass/LtvService
@@ -50,6 +52,18 @@ then
   tmux send-keys -t 2 'bundle install' C-m
   tmux send-keys -t 2 'rackup' C-m
   tmux send-keys -t 3 'redis-server' C-m
+  tmux send-keys -t 1 'git fetch' C-m
+  tmux send-keys -t 1 'git status' C-m
+
+  cd ~/Work/Compass/CompassShared
+  git checkout master
+  tmux new-window
+  tmux split-window -v -p 30
+  tmux split-window -h
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux send-keys -t 2 'bundle install' C-m
+  tmux send-keys -t 1 'git fetch' C-m
   tmux send-keys -t 1 'git status' C-m
 
   tmux select-window -t ${SESSION_NAME}:1

@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+SESSION_NAME="interview"
+
+cd ~/Workspace/interviews
+
+tmux has-session -t ${SESSION_NAME}
+
+if [ $? != 0 ]
+then
+  tmux new -s ${SESSION_NAME} -d
+  tmux split-window -h
+  tmux split-window -v
+  tmux send-keys -t 1 'irb' C-m
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+fi
+
+tmux attach -t ${SESSION_NAME}
