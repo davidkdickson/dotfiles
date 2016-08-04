@@ -1,9 +1,8 @@
 #!/bin/zsh
 
 # meta
-alias reload='source ~/.dot-files/.zshrc'
+alias reload='source ~/.zshrc'
 alias ea='vim ~/.dot-files/aliases/aliases'
-alias ee='vim ~/.dot-files/zsh/env'
 alias ega='vim ~/.dot-files/aliases/git'
 alias erc='vim ~/.dot-files/zshrc'
 
@@ -13,12 +12,12 @@ alias la="ls -A -l -G"
 alias c='clear'
 alias ..='cd ..'
 
-alias dot-files='vim ~/.dot-files'
-alias e-scripts='vim ~/Scripts'
-alias blog='vim ~/Workspace/Projects/davidkdickson.github.io'
-alias todo-personal='vim ~/Desktop/todo/todo_personal'
-alias todo-work='vim ~/Desktop/todo/todo_work'
-alias todo='vim -O ~/Desktop/todo/todo_personal ~/Desktop/todo/todo_work'
+alias dot-files='cd ./dot-files; vim'
+alias e-scripts='cd ~/Work/Compass/sql-scripts; vim'
+alias blog='cd ~/Workspace/Projects/davidkdickson.github.io; vim'
+alias todo-personal='cd ~/Desktop/todo/todo_personal; vim '
+alias todo-work='cd ~/Desktop/todo/todo_work; vim'
+alias todo='cd ~/Desktop/todo/todo_personal; vim'
 
 # test
 alias t='bundle exec rspec'
