@@ -2,10 +2,10 @@
 
 # meta
 alias reload='source ~/.dot-files/.zshrc'
-alias ea='atom ~/.dot-files/.aliases/aliases'
-alias ee='atom ~/.dot-files/.zsh/env'
-alias ega='atom ~/.dot-files/.aliases/git'
-alias erc='atom ~/.dot-files/.zshrc'
+alias ea='vim ~/.dot-files/aliases/aliases'
+alias ee='vim ~/.dot-files/zsh/env'
+alias ega='vim ~/.dot-files/aliases/git'
+alias erc='vim ~/.dot-files/zshrc'
 
 # utility
 alias a='ls -A' # -A all except literal . ..
@@ -13,11 +13,11 @@ alias la="ls -A -l -G"
 alias c='clear'
 alias ..='cd ..'
 
-alias dot-files='atom ~/.dot-files'
+alias dot-files='vim ~/.dot-files'
 alias e-scripts='vim ~/Scripts'
-alias blog='atom ~/Workspace/Projects/davidkdickson.github.io'
-alias todo-personal='atom ~/Desktop/todo/todo_personal'
-alias todo-work='atom ~/Desktop/todo/todo_work'
+alias blog='vim ~/Workspace/Projects/davidkdickson.github.io'
+alias todo-personal='vim ~/Desktop/todo/todo_personal'
+alias todo-work='vim ~/Desktop/todo/todo_work'
 alias todo='vim -O ~/Desktop/todo/todo_personal ~/Desktop/todo/todo_work'
 
 # test

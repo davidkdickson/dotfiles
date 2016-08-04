@@ -26,12 +26,25 @@ ZSH_THEME="steeef"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
+plugins=(jira)
+
 source $ZSH/oh-my-zsh.sh
 
-source ~/.dot-files/.zsh/env
-source ~/.dot-files/.aliases/aliases
-source ~/.dot-files/.aliases/projects
-source ~/.dot-files/.aliases/git
-export PATH=~/.rbenv/shims:/usr/local/sbin:$PATH
-
+source ~/.dot-files/zsh/env
+source ~/.dot-files/aliases/aliases
+source ~/.dot-files/aliases/projects
+source ~/.dot-files/aliases/git
+export PATH=~/.rbenv/shims:/usr/local/sbin:~/.dot-files/scripts:$PATH
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
 eval "$(rbenv init -)"
+
+alias tmux="tmux -2"
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+export JIRA_RAPID_BOARD=true
+export EDITOR=vim
+export RACK_ENV=local
