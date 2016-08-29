@@ -16,6 +16,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'scrooloose/syntastic'
 Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'tpope/vim-endwise'                " automatically add end to functions
 
 filetype plugin indent on
 set background=dark

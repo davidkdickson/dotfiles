@@ -16,6 +16,7 @@ alias dot-files='cd ~/.dot-files; vim -c "NERDTree"'
 alias e-scripts='cd ~/Work/Compass/sql-scripts; vim -c "NERDTree"'
 alias blog='cd ~/Workspace/Projects/davidkdickson.github.io; vim -c "NERDTree"'
 alias todo='cd ~/Desktop/todo; vim -c "NERDTree"'
+alias priorities='cd ~/Work/Compass/demo; vim -c "NERDTree"'
 
 # test
 alias t='bundle exec rspec'
