@@ -27,6 +27,7 @@ ZSH_THEME="steeef"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
 plugins=(jira)
+plugins+=(zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -35,8 +36,6 @@ source ~/.dot-files/aliases/aliases
 source ~/.dot-files/aliases/projects
 source ~/.dot-files/aliases/git
 export PATH=~/.rbenv/shims:/usr/local/sbin:~/.dot-files/scripts:$PATH
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
 eval "$(rbenv init -)"
 
 alias tmux="tmux -2"

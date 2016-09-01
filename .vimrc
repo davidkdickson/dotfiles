@@ -30,7 +30,9 @@ set shiftwidth=2
 set expandtab
 set number
 set mouse=a
-set clipboard^=unnamed      " allow copy to mac keyboard
+set clipboard^=unnamed                    " allow copy to mac keyboard
+set backspace=indent,eol,start            " backspace works as you would expect
+set smarttab
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -59,3 +61,7 @@ let g:syntastic_check_on_wq = 0
 
 " airline
 set laststatus=2
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>   " shortcut key
+let g:NERDTreeWinSize = 50      " set width
