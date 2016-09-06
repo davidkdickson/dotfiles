@@ -17,6 +17,8 @@ Plugin 'elixir-lang/vim-elixir'
 Plugin 'scrooloose/syntastic'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tpope/vim-endwise'                " automatically add end to functions
+Plugin 'ntpeters/vim-better-whitespace'   " highlight trailing whitespace
+Plugin 'ervandew/supertab'                " autocompletion with tab
 
 filetype plugin indent on
 set background=dark
@@ -65,3 +67,9 @@ set laststatus=2
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>   " shortcut key
 let g:NERDTreeWinSize = 50      " set width
+
+" disable arrow keys in escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
