@@ -19,6 +19,10 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tpope/vim-endwise'                " automatically add end to functions
 Plugin 'ntpeters/vim-better-whitespace'   " highlight trailing whitespace
 Plugin 'ervandew/supertab'                " autocompletion with tab
+" snippet support
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
 
 filetype plugin indent on
 set background=dark
@@ -35,6 +39,9 @@ set mouse=a
 set clipboard^=unnamed                    " allow copy to mac keyboard
 set backspace=indent,eol,start            " backspace works as you would expect
 set smarttab
+set colorcolumn=121
+
+packadd! matchit
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -73,3 +80,7 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
+map <leader>r :!ruby %<cr>
+
+" strip whitespace on save
+autocmd BufWritePre * StripWhitespace

@@ -8,4 +8,5 @@ alias chealth='cd ~/Work/Compass/CompassHealth'
 alias creport='cd ~/Work/Compass/CompassReporting'
 alias interview='cd ~/Workspace/Interviews'
 alias demo='cd ~/Work/Compass/demo'
+alias sql-scripts='cd ~/Work/Compass/sql-scripts'
 
