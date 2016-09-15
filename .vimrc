@@ -5,6 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Plugin 'VundleVim/Vundle.vim'             " plugin manager
+Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'              " tree view of files
 Plugin 'christoomey/vim-tmux-navigator'   " navigate tmux panes and vim
 Plugin 'ctrlpvim/ctrlp.vim'               " fuzzy search
@@ -13,7 +14,6 @@ Plugin 'vim-airline/vim-airline'          " airline status bar
 Plugin 'vim-airline/vim-airline-themes'   " airline themes
 Plugin 'craigemery/vim-autotag'           " automatically update ctags on saving
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'scrooloose/syntastic'
 Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tpope/vim-endwise'                " automatically add end to functions
