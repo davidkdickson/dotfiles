@@ -26,7 +26,7 @@ ZSH_THEME="steeef"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(jira)
+plugins=(jira, vi-mode)
 plugins+=(zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
@@ -47,3 +47,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark.sh"
 export JIRA_RAPID_BOARD=true
 export EDITOR=vim
 export RACK_ENV=local
+
+
+bindkey -v # vi mode

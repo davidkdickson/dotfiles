@@ -11,4 +11,5 @@ alias sql-scripts='cd ~/Work/Compass/sql-scripts'
 
 # personal
 alias algo='cd ~/Workspace/algorithms'
+alias short='vim ~/Desktop/shortcuts'
 
