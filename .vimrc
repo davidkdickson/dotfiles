@@ -23,6 +23,7 @@ Plugin 'ervandew/supertab'                " autocompletion with tab
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'thoughtbot/vim-rspec'
 
 filetype plugin indent on
 set background=dark
