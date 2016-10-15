@@ -28,6 +28,7 @@ ZSH_THEME="steeef"
 
 plugins=(jira)
 plugins+=(zsh-nvm)
+plugins+=(vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
