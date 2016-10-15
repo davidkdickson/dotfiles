@@ -26,7 +26,7 @@ ZSH_THEME="steeef"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(jira, vi-mode)
+plugins=(jira)
 plugins+=(zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
@@ -48,5 +48,8 @@ export JIRA_RAPID_BOARD=true
 export EDITOR=vim
 export RACK_ENV=local
 
+docker-login() {
+ $(aws ecr get-login --region us-east-1)
+ }
 
-bindkey -v # vi mode
+
