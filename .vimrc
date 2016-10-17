@@ -24,6 +24,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'ngmy/vim-rubocop'
 
 filetype plugin indent on
 set background=dark
@@ -85,6 +86,7 @@ map <leader>r :!ruby %<cr>
 
 " strip whitespace on save
 autocmd BufWritePre * StripWhitespace
+autocmd BufWritePre * RuboCop
 
 " vim-rspec
 map <Leader>t :call RunCurrentSpecFile()<CR>
@@ -98,3 +100,7 @@ imap jk <Esc>
 " snipmate remapping to play better with supertab
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
+
+" Quickfix navigation.
+nnoremap ]q :cnext<CR>
+nnoremap [q :cprevious<CR>
