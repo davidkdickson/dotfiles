@@ -86,7 +86,7 @@ map <leader>r :!ruby %<cr>
 
 " strip whitespace on save
 autocmd BufWritePre * StripWhitespace
-autocmd BufWritePre * RuboCop
+autocmd BufWritePre *.rb RuboCop
 
 " vim-rspec
 map <Leader>t :call RunCurrentSpecFile()<CR>
