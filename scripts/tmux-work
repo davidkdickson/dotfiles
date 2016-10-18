@@ -29,7 +29,7 @@ then
   tmux send-keys -t 2 'rackup' C-m
   tmux rename-window 'core'
 
-  cd ~/work/compass/reporting
+  cd ~/work/compass/reporting-service
   git checkout development
   tmux new-window
   tmux split-window -v -p 30
