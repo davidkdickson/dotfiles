@@ -2,7 +2,7 @@
 
 SESSION_NAME="interview"
 
-cd ~/Workspace/interviews
+cd ~/workspace/interviews
 
 tmux has-session -t ${SESSION_NAME}
 

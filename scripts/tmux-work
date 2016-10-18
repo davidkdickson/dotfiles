@@ -2,7 +2,7 @@
 
 SESSION_NAME="work"
 
-cd ~/Work/Compass
+cd ~/work/compass
 
 pid=$(lsof -i:4567 -t); kill -TERM $pid || kill -KILL $pid
 pid=$(lsof -i:8080 -t); kill -TERM $pid || kill -KILL $pid
@@ -15,7 +15,7 @@ tmux has-session -t ${SESSION_NAME}
 
 if [ $? != 0 ]
 then
-  cd ~/Work/Compass/CompassCore
+  cd ~/work/compass/core
   git checkout development
   tmux new -s ${SESSION_NAME} -d
   tmux split-window -v -p 30
@@ -25,12 +25,11 @@ then
   tmux send-keys -t 1 'git checkout development' C-m
   tmux send-keys -t 1 'git pull' C-m
   tmux send-keys -t 2 'gulp build --gulpfile ./core.client/gulpfile.js' C-m
-  tmux send-keys -t 2 'gulp build --gulpfile ./core.client/gulpfile.js' C-m
   tmux send-keys -t 2 'bundle install' C-m
   tmux send-keys -t 2 'rackup' C-m
-  tmux rename-window 'Core'
+  tmux rename-window 'core'
 
-  cd ~/Work/Compass/CompassReporting
+  cd ~/work/compass/reporting
   git checkout development
   tmux new-window
   tmux split-window -v -p 30
@@ -41,9 +40,9 @@ then
   tmux send-keys -t 1 'git pull' C-m
   tmux send-keys -t 2 'bundle install' C-m
   tmux send-keys -t 2 'rackup' C-m
-  tmux rename-window 'Reporting'
+  tmux rename-window 'reporting'
 
-  cd ~/Work/Compass/LtvService
+  cd ~/work/compass/ltv-service
   git checkout development
   tmux new-window
   tmux split-window -v -p 30
@@ -56,9 +55,9 @@ then
   tmux send-keys -t 2 'bundle install' C-m
   tmux send-keys -t 2 'rackup' C-m
   tmux send-keys -t 3 'redis-server' C-m
-  tmux rename-window 'Ltv'
+  tmux rename-window 'ltv'
 
-  cd ~/Work/Compass/RepurchaseRateService
+  cd ~/work/compass/repurchase-rate-service
   git checkout development
   tmux new-window
   tmux split-window -v -p 30
@@ -69,9 +68,9 @@ then
   tmux send-keys -t 1 'git pull' C-m
   tmux send-keys -t 2 'bundle install' C-m
   tmux send-keys -t 2 'rackup' C-m
-  tmux rename-window 'Repurchase'
-  
-  cd ~/Work/Compass/CompassShared
+  tmux rename-window 'repurchase'
+
+  cd ~/work/compass/compass-shared
   git checkout master
   tmux new-window
   tmux split-window -v -p 30
@@ -81,10 +80,10 @@ then
   tmux send-keys -t 1 'git checkout development' C-m
   tmux send-keys -t 1 'git pull' C-m
   tmux send-keys -t 2 'bundle install' C-m
-  tmux rename-window 'Shared'
+  tmux rename-window 'shared'
 
 
-  cd ~/Work/Compass/CompassCoreHub
+  cd ~/work/compass/hub
   git checkout master
   tmux new-window
   tmux split-window -v -p 30
@@ -94,7 +93,7 @@ then
   tmux send-keys -t 1 'git checkout development' C-m
   tmux send-keys -t 1 'git pull' C-m
   tmux send-keys -t 2 'bundle install' C-m
-  tmux rename-window 'Hub'
+  tmux rename-window 'hub'
 
   tmux select-window -t ${SESSION_NAME}:1
 fi

@@ -1,15 +1,14 @@
-# projects Compass
-alias comp='cd ~/Work/Compass'
-alias ccore='cd ~/Work/Compass/CompassCore'
-alias chub='cd ~/Work/Compass/CompassCoreHub'
-alias cshared='cd ~/Work/Compass/compassshared'
-alias cscheduler='cd ~/Work/Compass/CompassScheduler'
-alias chealth='cd ~/Work/Compass/CompassHealth'
-alias creport='cd ~/Work/Compass/CompassReporting'
-alias demo='cd ~/Work/Compass/demo'
-alias sql-scripts='cd ~/Work/Compass/sql-scripts'
-
+# projects compass
+alias comp='cd ~/work/compass'
+alias ccore='cd ~/work/compass/core'
+alias chub='cd ~/work/compass/hub'
+alias cshared='cd ~/work/compass/compass-shared'
+alias cscheduler='cd ~/work/compass/scheduler'
+alias chealth='cd ~/work/compass/health'
+alias creport='cd ~/work/compass/reporting'
+alias demo='cd ~/work/compass/demo'
+alias e-scripts='cd ~/work/compass/sql-scripts; vim -c "NERDTree"'
 # personal
-alias algo='cd ~/Workspace/algorithms'
+alias algo='cd ~/workspace/algorithms'
 alias short='vim ~/Desktop/shortcuts'
 
