@@ -104,3 +104,6 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 " Quickfix navigation.
 nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
+
+let mapleader=" "
+nnoremap <Leader>w :w<CR>
