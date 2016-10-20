@@ -94,9 +94,6 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" better escape mapping
-imap jk <Esc>
-
 " snipmate remapping to play better with supertab
 imap <C-J> <Plug>snipMateNextOrTrigger
 smap <C-J> <Plug>snipMateNextOrTrigger
@@ -105,5 +102,14 @@ smap <C-J> <Plug>snipMateNextOrTrigger
 nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
 
+" better mappings
 let mapleader=" "
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>wq :wq<CR>
+imap jk <Esc>
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
