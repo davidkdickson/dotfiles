@@ -106,6 +106,7 @@ nnoremap [q :cprevious<CR>
 let mapleader=" "
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>q :q<CR>
 imap jk <Esc>
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
