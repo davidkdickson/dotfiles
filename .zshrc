@@ -26,9 +26,7 @@ ZSH_THEME="steeef"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 
-plugins=(jira)
-plugins+=(zsh-nvm)
-plugins+=(vi-mode)
+plugins=(jira zsh-nvm vi-mode brew)
 
 source $ZSH/oh-my-zsh.sh
 
