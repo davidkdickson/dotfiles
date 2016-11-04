@@ -4,96 +4,65 @@ SESSION_NAME="work"
 
 cd ~/work/compass
 
-pid=$(lsof -i:4567 -t); kill -TERM $pid || kill -KILL $pid
-pid=$(lsof -i:8080 -t); kill -TERM $pid || kill -KILL $pid
-pid=$(lsof -i:9000 -t); kill -TERM $pid || kill -KILL $pid
-pid=$(lsof -i:9001 -t); kill -TERM $pid || kill -KILL $pid
-pid=$(lsof -i:9002 -t); kill -TERM $pid || kill -KILL $pid
-pid=$(lsof -i:6379 -t); kill -TERM $pid || kill -KILL $pid
-
 tmux has-session -t ${SESSION_NAME}
 
 if [ $? != 0 ]
 then
   cd ~/work/compass/core
-  git checkout development
   tmux new -s ${SESSION_NAME} -d
   tmux split-window -v -p 30
-  tmux split-window -h
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
-  tmux send-keys -t 1 'git checkout development' C-m
-  tmux send-keys -t 1 'git pull' C-m
-  tmux send-keys -t 2 'gulp build --gulpfile ./core.client/gulpfile.js' C-m
-  tmux send-keys -t 2 'bundle install' C-m
-  tmux send-keys -t 2 'rackup' C-m
   tmux rename-window 'core'
 
   cd ~/work/compass/reporting-service
-  git checkout development
   tmux new-window
   tmux split-window -v -p 30
-  tmux split-window -h
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
-  tmux send-keys -t 1 'git checkout development' C-m
-  tmux send-keys -t 1 'git pull' C-m
-  tmux send-keys -t 2 'bundle install' C-m
-  tmux send-keys -t 2 'rackup' C-m
   tmux rename-window 'reporting'
 
   cd ~/work/compass/ltv-service
-  git checkout development
   tmux new-window
   tmux split-window -v -p 30
-  tmux split-window -h
-  tmux split-window -h
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
-  tmux send-keys -t 1 'git checkout development' C-m
-  tmux send-keys -t 1 'git pull' C-m
-  tmux send-keys -t 2 'bundle install' C-m
-  tmux send-keys -t 2 'rackup' C-m
-  tmux send-keys -t 3 'redis-server' C-m
   tmux rename-window 'ltv'
 
   cd ~/work/compass/repurchase-rate-service
-  git checkout development
   tmux new-window
   tmux split-window -v -p 30
-  tmux split-window -h
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
-  tmux send-keys -t 1 'git checkout development' C-m
-  tmux send-keys -t 1 'git pull' C-m
-  tmux send-keys -t 2 'bundle install' C-m
-  tmux send-keys -t 2 'rackup' C-m
   tmux rename-window 'repurchase'
 
   cd ~/work/compass/compass-shared
-  git checkout master
   tmux new-window
   tmux split-window -v -p 30
-  tmux split-window -h
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
-  tmux send-keys -t 1 'git checkout development' C-m
-  tmux send-keys -t 1 'git pull' C-m
-  tmux send-keys -t 2 'bundle install' C-m
   tmux rename-window 'shared'
 
-
   cd ~/work/compass/hub
-  git checkout master
   tmux new-window
   tmux split-window -v -p 30
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux rename-window 'hub'
+
+  cd ~/work/compass/magento-collector-service
+  tmux new-window
+  tmux split-window -v -p 30
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux rename-window 'magento'
+
+  cd ~/work/compass/compass-scripts
+  tmux new-window
   tmux split-window -h
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
-  tmux send-keys -t 1 'git checkout development' C-m
-  tmux send-keys -t 1 'git pull' C-m
-  tmux send-keys -t 2 'bundle install' C-m
-  tmux rename-window 'hub'
+  tmux rename-window 'scripts'
 
   tmux select-window -t ${SESSION_NAME}:1
 fi
