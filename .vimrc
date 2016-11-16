@@ -105,6 +105,7 @@ nnoremap [q :cprevious<CR>
 " better mappings
 let mapleader=" "
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>wa :wall<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>q :q<CR>
 imap jk <Esc>
