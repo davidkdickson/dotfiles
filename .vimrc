@@ -19,11 +19,10 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'tpope/vim-endwise'                " automatically add end to functions
 Plugin 'ntpeters/vim-better-whitespace'   " highlight trailing whitespace
 Plugin 'ervandew/supertab'                " autocompletion with tab
-" snippet support
-Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'MarcWeber/vim-addon-mw-utils'     " snippet support
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'thoughtbot/vim-rspec'
+Plugin 'thoughtbot/vim-rspec'             " rspec shortcuts
 Plugin 'ngmy/vim-rubocop'
 
 filetype plugin indent on
@@ -88,11 +87,6 @@ map <leader>r :!ruby %<cr>
 autocmd BufWritePre * StripWhitespace
 autocmd BufWritePre *.rb RuboCop
 
-" vim-rspec
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 " snipmate remapping to play better with supertab
 imap <C-J> <Plug>snipMateNextOrTrigger
@@ -117,3 +111,8 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 set relativenumber
+" vim-rspec
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
