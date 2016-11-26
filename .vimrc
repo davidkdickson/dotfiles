@@ -22,8 +22,8 @@ Plugin 'ervandew/supertab'                " autocompletion with tab
 Plugin 'MarcWeber/vim-addon-mw-utils'     " snippet support
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
-Plugin 'thoughtbot/vim-rspec'             " rspec shortcuts
 Plugin 'ngmy/vim-rubocop'
+Plugin 'tpope/vim-dispatch'
 
 filetype plugin indent on
 set background=dark
@@ -112,7 +112,5 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 set relativenumber
 " vim-rspec
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+nnoremap <leader>rt :Dispatch rspec %<cr>
+nnoremap <leader>rs: execute "Dispatch rspec %:" . line(".")<cr>
