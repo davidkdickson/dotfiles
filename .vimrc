@@ -41,6 +41,7 @@ set clipboard^=unnamed                    " allow copy to mac keyboard
 set backspace=indent,eol,start            " backspace works as you would expect
 set smarttab
 set colorcolumn=121
+set relativenumber
 
 packadd! matchit
 
@@ -64,6 +65,7 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:syntastic_ruby_checkers = ['rubocop', 'rubylint']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -85,8 +87,6 @@ map <leader>r :!ruby %<cr>
 
 " strip whitespace on save
 autocmd BufWritePre * StripWhitespace
-autocmd BufWritePre *.rb RuboCop
-
 
 " snipmate remapping to play better with supertab
 imap <C-J> <Plug>snipMateNextOrTrigger
@@ -110,7 +110,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
-set relativenumber
 " vim-rspec
-nnoremap <leader>rt :Dispatch rspec %<cr>
-nnoremap <leader>rs: execute "Dispatch rspec %:" . line(".")<cr>
+nnoremap <leader>t :Dispatch rspec %<cr>
+nnoremap <leader>s :execute "Dispatch rspec %:" . line(".")<cr>
