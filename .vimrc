@@ -88,10 +88,6 @@ map <leader>r :!ruby %<cr>
 " strip whitespace on save
 autocmd BufWritePre * StripWhitespace
 
-" snipmate remapping to play better with supertab
-"imap <C-J> <Plug>snipMateNextOrTrigger
-"smap <C-J> <Plug>snipMateNextOrTrigger
-
 " Quickfix navigation
 nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
@@ -106,6 +102,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wa :wall<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>qa :qa<CR>
 imap jk <Esc>
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
