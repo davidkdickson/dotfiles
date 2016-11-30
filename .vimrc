@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 Plugin 'VundleVim/Vundle.vim'             " plugin manager
-Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'               " git integration
 Plugin 'scrooloose/nerdtree'              " tree view of files
 Plugin 'christoomey/vim-tmux-navigator'   " navigate tmux panes and vim
 Plugin 'ctrlpvim/ctrlp.vim'               " fuzzy search
@@ -23,7 +23,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'     " snippet support
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'ngmy/vim-rubocop'
-Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-dispatch'               " allow tests to run in background efficiently
 
 filetype plugin indent on
 set background=dark
@@ -89,12 +89,16 @@ map <leader>r :!ruby %<cr>
 autocmd BufWritePre * StripWhitespace
 
 " snipmate remapping to play better with supertab
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
+"imap <C-J> <Plug>snipMateNextOrTrigger
+"smap <C-J> <Plug>snipMateNextOrTrigger
 
-" Quickfix navigation.
+" Quickfix navigation
 nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
+
+" location list navigation
+nnoremap ]l :lnext<CR>
+nnoremap [l :cprevious<CR>
 
 " better mappings
 let mapleader=" "
@@ -111,5 +115,5 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 " vim-rspec
-nnoremap <leader>t :Dispatch rspec %<cr>
+nnoremap <leader>t :Dispatch rspec % --format documentation<cr>
 nnoremap <leader>s :execute "Dispatch rspec %:" . line(".")<cr>
