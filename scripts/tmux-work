@@ -50,6 +50,13 @@ then
   tmux send-keys -t 0 'vim' C-m
   tmux rename-window 'hub'
 
+  cd ~/work/compass/scheduler
+  tmux new-window
+  tmux split-window -v -p 30
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux rename-window 'scheduler'
+
   cd ~/work/compass/magento-collector-service
   tmux new-window
   tmux split-window -v -p 30
@@ -57,12 +64,32 @@ then
   tmux send-keys -t 0 'vim' C-m
   tmux rename-window 'magento'
 
+  cd ~/work/compass/magento-shopify-service
+  tmux new-window
+  tmux split-window -v -p 30
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux rename-window 'shopify'
+
+  cd ~/work/compass/meetings
+  tmux new-window
+  tmux split-window -h
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux rename-window 'meetings'
+
   cd ~/work/compass/compass-scripts
   tmux new-window
   tmux split-window -h
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
   tmux rename-window 'scripts'
+
+  cd ~/work/compass/docker
+  tmux new-window
+  tmux split-window -h
+  tmux select-pane -t 0
+  tmux rename-window 'docker'
 
   tmux select-window -t ${SESSION_NAME}:1
 fi

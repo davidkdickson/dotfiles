@@ -26,11 +26,11 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-dispatch'               " allow tests to run in background efficiently
 
 filetype plugin indent on
-set background=dark
+let mapleader=" "
 let base16colorspace=256
 colorscheme base16-flat
 syntax on
-
+set background=dark
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -84,6 +84,7 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 map <leader>r :!ruby %<cr>
+map <leader>ct :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<cr>
 
 " strip whitespace on save
 autocmd BufWritePre * StripWhitespace
@@ -97,7 +98,6 @@ nnoremap ]l :lnext<CR>
 nnoremap [l :cprevious<CR>
 
 " better mappings
-let mapleader=" "
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wa :wall<CR>
 nnoremap <Leader>wq :wq<CR>
