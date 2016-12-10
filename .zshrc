@@ -47,11 +47,18 @@ export JIRA_RAPID_BOARD=true
 export EDITOR=vim
 export RACK_ENV=local
 
-docker-login() {
- $(aws ecr get-login --region us-east-1)
- }
-
 # start tmux
 if [[ ! $TERM =~ screen ]]; then
     exec tmux
 fi
+
+function docker-login() {
+ $(aws ecr get-login --region us-east-1)
+}
+
+
+function docker-login() {
+ $(aws ecr get-login --region us-east-1)
+}
+
+
