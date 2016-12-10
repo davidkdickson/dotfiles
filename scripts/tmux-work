@@ -64,7 +64,7 @@ then
   tmux send-keys -t 0 'vim' C-m
   tmux rename-window 'magento'
 
-  cd ~/work/compass/magento-shopify-service
+  cd ~/work/compass/shopify-collector-service
   tmux new-window
   tmux split-window -v -p 30
   tmux select-pane -t 0

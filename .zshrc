@@ -51,4 +51,7 @@ docker-login() {
  $(aws ecr get-login --region us-east-1)
  }
 
-
+# start tmux
+if [[ ! $TERM =~ screen ]]; then
+    exec tmux
+fi
