@@ -27,9 +27,9 @@ export EDITOR=vim
 export RACK_ENV=local
 
 # start tmux
-if [[ ! $TERM =~ screen ]]; then
-    exec tmux
-fi
+#if [[ ! $TERM =~ screen ]]; then
+#    exec tmux
+#fi
 
 function docker-login() {
  $(aws ecr get-login --region us-east-1)
