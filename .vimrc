@@ -58,7 +58,6 @@ else
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-let NERDTreeShowHidden=1
 
 " Syntastic settings
 set statusline+=%#warningmsg#
@@ -76,7 +75,9 @@ set laststatus=2
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>   " shortcut key
-let g:NERDTreeWinSize = 50      " set width
+let g:NERDTreeWinSize=50      " set width
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['.git$[[dir]]']
 
 " disable arrow keys in escape mode
 map <up> <nop>
@@ -92,10 +93,12 @@ autocmd BufWritePre * StripWhitespace
 " Quickfix navigation
 nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
+"nnoremap <leader>q :close<CR>
 
 " location list navigation
 nnoremap ]l :lnext<CR>
-nnoremap [l :cprevious<CR>
+nnoremap [l :lprevious<CR>
+"nnoremap <leader>l :lclose<CR>
 
 " better mappings
 nnoremap <Leader>w :w<CR>
