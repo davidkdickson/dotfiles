@@ -42,6 +42,7 @@ set backspace=indent,eol,start            " backspace works as you would expect
 set smarttab
 set colorcolumn=121
 set relativenumber
+set incsearch                             " highlight word as searching
 
 packadd! matchit
 
@@ -107,6 +108,8 @@ nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>qa :qa<CR>
 imap jk <Esc>
+" select last
+nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
