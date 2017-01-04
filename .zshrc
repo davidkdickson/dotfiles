@@ -35,3 +35,11 @@ function docker-login() {
  $(aws ecr get-login --region us-east-1)
 }
 
+bindkey -v
+export KEYTIMEOUT=40
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey -M viins '^k' kill-line
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
