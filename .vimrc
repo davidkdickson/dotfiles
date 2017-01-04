@@ -94,12 +94,20 @@ autocmd BufWritePre * StripWhitespace
 " Quickfix navigation
 nnoremap ]q :cnext<CR>
 nnoremap [q :cprevious<CR>
-"nnoremap <leader>q :close<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
 
 " location list navigation
 nnoremap ]l :lnext<CR>
 nnoremap [l :lprevious<CR>
-"nnoremap <leader>l :lclose<CR>
+nnoremap ]L :lfirst<CR>
+nnoremap [L :llast<CR>
+
+" buffers navigation
+nnoremap ]b :bnext<CR>
+nnoremap [b :bprevious<CR>
+nnoremap ]B :bfirst<CR>
+nnoremap [B :blast<CR>
 
 " better mappings
 nnoremap <Leader>w :w<CR>
