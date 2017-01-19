@@ -26,11 +26,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/scripts/base16-default-dark.sh"
 export EDITOR=vim
 export RACK_ENV=local
 
-# start tmux
-#if [[ ! $TERM =~ screen ]]; then
-#    exec tmux
-#fi
-
 function docker-login() {
  $(aws ecr get-login --region us-east-1)
 }

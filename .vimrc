@@ -24,6 +24,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-dispatch'               " allow tests to run in background efficiently
+Plugin 'majutsushi/tagbar'                " ctags toolbar
 
 filetype plugin indent on
 let mapleader=" "
@@ -53,10 +54,10 @@ nnoremap <C-H> <C-W><C-H>
 
 if exists('$TMUX')
     let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 else
     let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=1\x7"
 endif
 
 
@@ -115,6 +116,8 @@ nnoremap <Leader>wa :wall<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>qa :qa<CR>
+nnoremap <Leader>q! :q!<CR>
+nnoremap <Leader>y :SyntasticToggleMode<CR>
 imap jk <Esc>
 " select last
 nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
