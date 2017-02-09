@@ -44,6 +44,7 @@ set smarttab
 set colorcolumn=121
 set relativenumber
 set incsearch                             " highlight word as searching
+set cursorline                            " highlight current line
 
 packadd! matchit
 
