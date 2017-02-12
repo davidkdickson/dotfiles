@@ -71,6 +71,13 @@ then
   tmux send-keys -t 0 'vim' C-m
   tmux rename-window 'shopify'
 
+  cd ~/work/compass/googleanalytics-collector-service
+  tmux new-window
+  tmux split-window -v -p 30
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux rename-window 'google'
+
   cd ~/work/compass/meetings
   tmux new-window
   tmux split-window -h
