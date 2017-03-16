@@ -25,6 +25,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'tpope/vim-dispatch'               " allow tests to run in background efficiently
 Plugin 'majutsushi/tagbar'                " ctags toolbar
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 filetype plugin indent on
 let mapleader=" "
@@ -72,8 +73,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_eslint_exec = '/bin/ls' " hack to make sure it always turns on
-let g:syntastic_javascript_eslint_exe = 'PATH=$(npm bin):$PATH eslint'
 " airline
 let g:airline_theme='base16'
 set laststatus=2
