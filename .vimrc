@@ -72,7 +72,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
+let g:syntastic_javascript_eslint_exec = '/bin/ls' " hack to make sure it always turns on
+let g:syntastic_javascript_eslint_exe = 'PATH=$(npm bin):$PATH eslint'
 " airline
 let g:airline_theme='base16'
 set laststatus=2
