@@ -6,3 +6,7 @@
 5. `ln ~/.dot-files/.tmux.conf ~/.tmux.conf`
 6. `ln ~/.dot-files/.psqlrc ~/.psqlrc`
 7. Install Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+8. `git clone https://github.com/rbenv/rbenv.git ~/.rbenv`
+9. `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshenv`
+10. `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshenv`
+11. `exec $SHELL`
