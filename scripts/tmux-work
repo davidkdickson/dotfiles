@@ -1,104 +1,94 @@
 #!/bin/zsh
 
-SESSION_NAME="work"
+SESSION_NAME="services"
 
 cd ~/work/compass
+
+developer_setup () {
+  cd ~/work/compass/$1
+  tmux new-window
+  tmux split-window -v -p 30
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux rename-window $1
+}
+
+split_setup() {
+  cd ~/work/compass/$1
+  tmux new-window
+  tmux split-window -h
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux rename-window $1
+}
 
 tmux has-session -t ${SESSION_NAME}
 
 if [ $? != 0 ]
 then
   cd ~/work/compass/core
+
   tmux new -s ${SESSION_NAME} -d
+
   tmux split-window -v -p 30
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
   tmux rename-window 'core'
 
-  cd ~/work/compass/reporting-service
-  tmux new-window
-  tmux split-window -v -p 30
-  tmux select-pane -t 0
-  tmux send-keys -t 0 'vim' C-m
-  tmux rename-window 'reporting'
+  developer_setup 'reporting-service'
+  developer_setup 'clv-service'
+  developer_setup 'repurchase-rate-service'
+  developer_setup 'compass-shared'
+  developer_setup 'scheduler'
 
-  cd ~/work/compass/ltv-service
-  tmux new-window
-  tmux split-window -v -p 30
-  tmux select-pane -t 0
-  tmux send-keys -t 0 'vim' C-m
-  tmux rename-window 'ltv'
+  tmux select-window -t ${SESSION_NAME}:1
+fi
 
-  cd ~/work/compass/repurchase-rate-service
-  tmux new-window
-  tmux split-window -v -p 30
-  tmux select-pane -t 0
-  tmux send-keys -t 0 'vim' C-m
-  tmux rename-window 'repurchase'
+SESSION_NAME="collectors"
 
-  cd ~/work/compass/compass-shared
-  tmux new-window
-  tmux split-window -v -p 30
-  tmux select-pane -t 0
-  tmux send-keys -t 0 'vim' C-m
-  tmux rename-window 'shared'
+tmux has-session -t ${SESSION_NAME}
 
+if [ $? != 0 ]
+then
   cd ~/work/compass/hub
-  tmux new-window
+
+  tmux new -s ${SESSION_NAME} -d
+
   tmux split-window -v -p 30
   tmux select-pane -t 0
   tmux send-keys -t 0 'vim' C-m
   tmux rename-window 'hub'
 
-  cd ~/work/compass/scheduler
-  tmux new-window
-  tmux split-window -v -p 30
-  tmux select-pane -t 0
-  tmux send-keys -t 0 'vim' C-m
-  tmux rename-window 'scheduler'
+  developer_setup 'shopify-collector-service'
+  developer_setup 'magento-collector-service'
+  developer_setup 'googleanalytics-collector-service'
+  developer_setup 'facebook-collector-service'
+  developer_setup 'amazon-collector-service'
+  developer_setup 'stripe-collector-service'
+  developer_setup 'paypal-collector-service'
+  developer_setup 'collector-common'
+  developer_setup 'warren'
 
-  cd ~/work/compass/magento-collector-service
-  tmux new-window
-  tmux split-window -v -p 30
-  tmux select-pane -t 0
-  tmux send-keys -t 0 'vim' C-m
-  tmux rename-window 'magento'
+  tmux select-window -t ${SESSION_NAME}:1
+fi
 
-  cd ~/work/compass/shopify-collector-service
-  tmux new-window
-  tmux split-window -v -p 30
-  tmux select-pane -t 0
-  tmux send-keys -t 0 'vim' C-m
-  tmux rename-window 'shopify'
+SESSION_NAME="meetings"
 
-  cd ~/work/compass/googleanalytics-collector-service
-  tmux new-window
-  tmux split-window -v -p 30
-  tmux select-pane -t 0
-  tmux send-keys -t 0 'vim' C-m
-  tmux rename-window 'google'
+tmux has-session -t ${SESSION_NAME}
 
+if [ $? != 0 ]
+then
   cd ~/work/compass/meetings
-  tmux new-window
-  tmux split-window -h
-  tmux select-pane -t 0
+
+  tmux new -s ${SESSION_NAME} -d
+
   tmux send-keys -t 0 'vim' C-m
   tmux rename-window 'meetings'
 
-  cd ~/work/compass/compass-scripts
+  cd ~/Desktop/todo
   tmux new-window
-  tmux split-window -h
-  tmux select-pane -t 0
-  tmux send-keys -t 0 'vim' C-m
-  tmux rename-window 'scripts'
-
-  cd ~/work/compass/docker
-  tmux new-window
-  tmux split-window -h
-  tmux select-pane -t 0
-  tmux rename-window 'docker'
-
-  tmux select-window -t ${SESSION_NAME}:1
+  tmux send-keys -t 0 'todo' C-m
+  tmux rename-window 'todo'
 fi
 
 tmux attach -t ${SESSION_NAME}

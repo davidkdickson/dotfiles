@@ -27,7 +27,7 @@ export EDITOR=vim
 export RACK_ENV=local
 
 function docker-login() {
- $(aws ecr get-login --region us-east0)
+ $(aws ecr get-login --no-include-email)
 }
 
 bindkey -v

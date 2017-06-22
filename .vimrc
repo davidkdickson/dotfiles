@@ -81,7 +81,7 @@ set laststatus=2
 map <C-n> :NERDTreeToggle<CR>   " shortcut key
 let g:NERDTreeWinSize=50      " set width
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['.git$[[dir]]']
+let NERDTreeIgnore=['.git$[[dir]]', '.pyc']
 
 " disable arrow keys in escape mode
 map <up> <nop>

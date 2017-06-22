@@ -6,6 +6,8 @@ alias cshared='cd ~/work/compass/compass-shared'
 alias cscheduler='cd ~/work/compass/scheduler'
 alias chealth='cd ~/work/compass/health'
 alias creport='cd ~/work/compass/reporting'
+alias cscripts='cd ~/work/compass/compass-scripts'
+alias cmeet='cd ~/work/compass/meetings'
 alias demo='cd ~/work/compass/demo'
 alias e-scripts='cd ~/work/compass/sql-scripts; vim -c "NERDTree"'
 # personal
