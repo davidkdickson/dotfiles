@@ -1,9 +1,13 @@
 # Install Instructions
 1. Clone dot-files to `~/.dot-files`
-2. Clone oh-my-zsh to `~/.oh-my-zsh`
-3. `ln ~/.dot-files/.zshrc ~/.zshrc`
-4. `ln ~/.dot-files/.vimrc ~/.vimrc`
-5. `ln ~/.dot-files/.vimrc ~/.vimrc`
-6. `ln ~/.dot-files/.tmux.conf ~/.tmux.conf`
-7. `ln ~/.dot-files/.psqlrc ~/.psqlrc`
-8. Install Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+1. Clone oh-my-zsh to `~/.oh-my-zsh`
+1. `ln ~/.dot-files/.zshrc ~/.zshrc`
+1. `ln ~/.dot-files/.vimrc ~/.vimrc`
+1. `ln ~/.dot-files/.tmux.conf ~/.tmux.conf`
+1. `ln ~/.dot-files/.psqlrc ~/.psqlrc`
+1. Install Vundle `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+1. `git clone https://github.com/rbenv/rbenv.git ~/.rbenv`
+1. `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshenv`
+1. `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshenv`
+1. `exec $SHELL`
+1. Launch `vim` and run the vim command `:PluginInstall`
