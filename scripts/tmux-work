@@ -14,6 +14,15 @@ developer_setup () {
   tmux rename-window $new_name
 }
 
+split_setup () {
+  cd ~/work/compass/$1
+  tmux new-window
+  tmux split-window -h
+  tmux select-pane -t 0
+  tmux send-keys -t 0 'vim' C-m
+  tmux rename-window $1
+}
+
 services_session () {
   SESSION_NAME="services"
   tmux has-session -t ${SESSION_NAME}
@@ -34,6 +43,7 @@ services_session () {
     developer_setup 'repurchase-rate-service'
     developer_setup 'compass-shared'
     developer_setup 'scheduler'
+    split_setup 'docker'
 
     tmux select-window -t ${SESSION_NAME}:1
   fi
@@ -64,6 +74,7 @@ collectors_session () {
     developer_setup 'paypal-collector-service'
     developer_setup 'collector-common'
     developer_setup 'warren'
+    split_setup 'docker'
 
     tmux select-window -t ${SESSION_NAME}:1
   fi
@@ -90,8 +101,28 @@ meetings_session () {
   fi
 }
 
+ops_session () {
+  SESSION_NAME="ops"
+
+  tmux has-session -t ${SESSION_NAME}
+
+  if [ $? != 0 ]
+  then
+    cd ~/work/compass/ops
+
+    tmux new -s ${SESSION_NAME} -d
+
+    tmux send-keys -t 0 'vim' C-m
+    tmux rename-window 'ops'
+
+    split_setup 'compass-scripts'
+    split_setup 'docker-images'
+    split_setup 'parametor'
+  fi
+}
 services_session
 collectors_session
 meetings_session
+ops_session
 
 tmux attach -t collectors
