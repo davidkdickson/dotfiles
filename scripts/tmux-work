@@ -65,6 +65,7 @@ collectors_session () {
     tmux send-keys -t 0 'vim' C-m
     tmux rename-window 'hub'
 
+    developer_setup 'bigcommerce-collector-service'
     developer_setup 'shopify-collector-service'
     developer_setup 'magento-collector-service'
     developer_setup 'googleanalytics-collector-service'
