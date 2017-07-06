@@ -1,6 +1,10 @@
+# Prequisites
+* Oh My Zsh
+* vim or neovim
+* tmux
+* Vundle
+
 # Install Instructions
-1. Clone dot-files to `~/.dot-files`
-1. Install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh)
 1. `ln ~/.dot-files/.zshrc ~/.zshrc`
 1. `ln ~/.dot-files/.vimrc ~/.vimrc`
 1. `ln ~/.dot-files/.tmux.conf ~/.tmux.conf`
