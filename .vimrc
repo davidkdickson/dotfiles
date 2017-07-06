@@ -45,6 +45,7 @@ set colorcolumn=121
 set relativenumber
 set incsearch                             " highlight word as searching
 set cursorline                            " highlight current line
+set clipboard=unnamed,unnamedplus
 
 " packadd! matchit
 
