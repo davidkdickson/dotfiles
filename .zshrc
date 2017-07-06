@@ -35,6 +35,9 @@ bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
+eval `keychain -q --agents ssh --eval id_rsa`
+
+
 # precmd() { RPROMPT="" }
 # function zle-line-init zle-keymap-select {
 #    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
