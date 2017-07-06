@@ -14,8 +14,7 @@ alias ..='cd ..'
 
 alias dot-files='cd ~/.dot-files; vim -c "NERDTree"'
 alias blog='cd ~/Workspace/Projects/davidkdickson.github.io; vim -c "NERDTree"'
-alias todo='cd ~/Desktop/todo; vim -c "NERDTree"'
-alias priorities='cd ~/work/compass/demo; vim -c "NERDTree"'
+alias todo='cd ~/Dropbox/personal/todo; vim -c "NERDTree"'
 
 # test
 alias t='bundle exec rspec'

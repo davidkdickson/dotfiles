@@ -29,6 +29,7 @@ Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 filetype plugin indent on
 let mapleader=" "
+set termguicolors
 let base16colorspace=256
 colorscheme base16-flat
 syntax on
@@ -39,15 +40,13 @@ set shiftwidth=2
 set expandtab
 set number
 set mouse=a
-set clipboard^=unnamed                    " allow copy to mac keyboard
-set backspace=indent,eol,start            " backspace works as you would expect
 set smarttab
 set colorcolumn=121
 set relativenumber
 set incsearch                             " highlight word as searching
 set cursorline                            " highlight current line
 
-packadd! matchit
+" packadd! matchit
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
