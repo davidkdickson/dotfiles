@@ -1,10 +1,11 @@
 #!/bin/zsh
 
+COMPASS="/home/david/Work/compass"
 
-cd ~/work/compass
+cd $COMPASS
 
 developer_setup () {
-  cd ~/work/compass/$1
+  cd $COMPASS/$1
   tmux new-window
   tmux split-window -v -p 30
   tmux select-pane -t 0
@@ -15,7 +16,7 @@ developer_setup () {
 }
 
 split_setup () {
-  cd ~/work/compass/$1
+  cd $COMPASS/$1
   tmux new-window
   tmux split-window -h
   tmux select-pane -t 0
@@ -29,7 +30,7 @@ services_session () {
 
   if [ $? != 0 ]
   then
-    cd ~/work/compass/core
+    cd $COMPASS/core
 
     tmux new -s ${SESSION_NAME} -d
 
@@ -56,7 +57,7 @@ collectors_session () {
 
   if [ $? != 0 ]
   then
-    cd ~/work/compass/hub
+    cd $COMPASS/hub
 
     tmux new -s ${SESSION_NAME} -d
 
@@ -88,7 +89,7 @@ meetings_session () {
 
   if [ $? != 0 ]
   then
-    cd ~/work/compass/meetings
+    cd $COMPASS/meetings
 
     tmux new -s ${SESSION_NAME} -d
 
@@ -109,7 +110,7 @@ ops_session () {
 
   if [ $? != 0 ]
   then
-    cd ~/work/compass/ops
+    cd $COMPASS/ops
 
     tmux new -s ${SESSION_NAME} -d
 
