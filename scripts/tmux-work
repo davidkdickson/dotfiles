@@ -96,7 +96,7 @@ meetings_session () {
     tmux send-keys -t 0 'vim' C-m
     tmux rename-window 'meetings'
 
-    cd ~/Desktop/todo
+    cd ~/Dropbox/Personal/todo
     tmux new-window
     tmux send-keys -t 0 'todo' C-m
     tmux rename-window 'todo'

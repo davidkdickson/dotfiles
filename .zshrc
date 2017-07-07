@@ -24,6 +24,7 @@ function docker-login() {
  $(aws ecr get-login --no-include-email)
 }
 
+# vi mode
 bindkey -v
 export KEYTIMEOUT=40
 bindkey -M viins 'jk' vi-cmd-mode
@@ -37,13 +38,17 @@ bindkey '^r' history-incremental-search-backward
 
 eval `keychain -q --agents ssh --eval id_rsa`
 
+# restore search after vi plugin
 
-# precmd() { RPROMPT="" }
-# function zle-line-init zle-keymap-select {
-#    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-#    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
-#    zle reset-prompt
-# }
-#
-# zle -N zle-line-init
-# zle -N zle-keymap-select
+# start typing + [Up-Arrow] - fuzzy find history forward
+if [[ "${terminfo[kcuu1]}" != "" ]]; then
+  autoload -U up-line-or-beginning-search
+  zle -N up-line-or-beginning-search
+  bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
+fi
+# start typing + [Down-Arrow] - fuzzy find history backward
+if [[ "${terminfo[kcud1]}" != "" ]]; then
+  autoload -U down-line-or-beginning-search
+  zle -N down-line-or-beginning-search
+  bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
+fi
