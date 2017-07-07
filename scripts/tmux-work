@@ -117,7 +117,7 @@ ops_session () {
     tmux send-keys -t 0 'vim' C-m
     tmux rename-window 'ops'
 
-    split_setup 'compass-scripts'
+    split_setup 'scripts'
     split_setup 'docker-images'
     split_setup 'parametor'
   fi
