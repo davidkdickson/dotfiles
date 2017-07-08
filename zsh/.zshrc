@@ -5,7 +5,7 @@ ZSH_THEME="steeef"
 
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(zsh-nvm vi-mode docker)
+plugins=(zsh-nvm vi-mode docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.dot-files/zsh/env
