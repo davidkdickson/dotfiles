@@ -1,4 +1,6 @@
-Host myserver
-  HostName myserver.example.com
-  User myuser
-  Port 2233
+# Example:
+#
+# Host myserver
+#   HostName myserver.example.com
+#   User myuser
+#   Port 2233

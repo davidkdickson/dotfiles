@@ -1,4 +1,0 @@
-#!/bin/zsh
-
-export PATH=~/bin:$PATH
-export PSQL_EDITOR="atom"
