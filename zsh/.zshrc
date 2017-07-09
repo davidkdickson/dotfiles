@@ -8,7 +8,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(zsh-nvm vi-mode docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.dot-files/zsh/env
 source ~/.dot-files/aliases/aliases
 source ~/.dot-files/aliases/projects
 source ~/.dot-files/aliases/git

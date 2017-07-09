@@ -1,33 +1,10 @@
 set nocompatible
-filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-
-Plugin 'VundleVim/Vundle.vim'             " plugin manager
-Plugin 'tpope/vim-fugitive'               " git integration
-Plugin 'scrooloose/nerdtree'              " tree view of files
-Plugin 'christoomey/vim-tmux-navigator'   " navigate tmux panes and vim
-Plugin 'ctrlpvim/ctrlp.vim'               " fuzzy search
-Plugin 'chriskempson/base16-vim'          " color scheme
-Plugin 'vim-airline/vim-airline'          " airline status bar
-Plugin 'vim-airline/vim-airline-themes'   " airline themes
-Plugin 'craigemery/vim-autotag'           " automatically update ctags on saving
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'scrooloose/syntastic'
-Plugin 'ecomba/vim-ruby-refactoring'
-Plugin 'tpope/vim-endwise'                " automatically add end to functions
-Plugin 'ntpeters/vim-better-whitespace'   " highlight trailing whitespace
-Plugin 'ervandew/supertab'                " autocompletion with tab
-Plugin 'MarcWeber/vim-addon-mw-utils'     " snippet support
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'ngmy/vim-rubocop'
-Plugin 'tpope/vim-dispatch'               " allow tests to run in background efficiently
-Plugin 'majutsushi/tagbar'                " ctags toolbar
-Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 filetype plugin indent on
+
+source ~/.dot-files/vim/plugins.vim
+
+
 let mapleader=" "
 set termguicolors
 let base16colorspace=256
