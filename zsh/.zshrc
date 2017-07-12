@@ -53,3 +53,5 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 fi
 
 export PSQL_EDITOR="vim"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
