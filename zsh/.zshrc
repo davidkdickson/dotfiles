@@ -17,7 +17,7 @@ export PATH=~/.dot-files/scripts:$PATH
 alias tmux="tmux -2"
 alias vim="nvim"
 
-export EDITOR=vim
+export EDITOR=nvim
 
 function docker-login() {
  $(aws ecr get-login --no-include-email)
