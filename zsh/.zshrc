@@ -8,8 +8,6 @@ source ~/.dot-files/aliases/aliases
 source ~/.dot-files/aliases/projects
 source ~/.dot-files/aliases/git
 
-
-
 source ~/.dot-files/zsh/docker
 source ~/.dot-files/zsh/vi-mode
 source ~/.dot-files/zsh/ruby

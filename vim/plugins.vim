@@ -3,7 +3,7 @@ Plug 'tpope/vim-fugitive'               " git integration
 Plug 'scrooloose/nerdtree'              " tree view of files
 Plug 'christoomey/vim-tmux-navigator'   " navigate tmux panes and vim
 Plug 'ctrlpvim/ctrlp.vim'               " fuzzy search
-Plug 'chriskempson/base16-vim'          " color scheme
+Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'          " airline status bar
 Plug 'vim-airline/vim-airline-themes'   " airline themes
 Plug 'craigemery/vim-autotag'           " automatically update ctags on saving
