@@ -40,7 +40,7 @@ set laststatus=2
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=50
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['.git$[[dir]]', '.pyc']
+let NERDTreeIgnore=['.git$[[dir]]', '.pyc', '.whl']
 
 
 " strip whitespace on save
