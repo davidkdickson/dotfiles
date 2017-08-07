@@ -89,7 +89,7 @@ meetings_session () {
 
   if [ $? != 0 ]
   then
-    cd $COMPASS/meetings
+    cd ~/Dropbox/Work/meetings
 
     tmux new -s ${SESSION_NAME} -d
 
