@@ -44,7 +44,6 @@ services_session () {
     developer_setup 'repurchase-rate-service'
     developer_setup 'compass-shared'
     developer_setup 'scheduler'
-    split_setup 'docker'
 
     tmux select-window -t ${SESSION_NAME}:1
   fi
@@ -76,7 +75,6 @@ collectors_session () {
     developer_setup 'paypal-collector-service'
     developer_setup 'collector-common'
     developer_setup 'warren'
-    split_setup 'docker'
 
     tmux select-window -t ${SESSION_NAME}:1
   fi
@@ -117,6 +115,7 @@ ops_session () {
     tmux send-keys -t 0 'vim' C-m
     tmux rename-window 'ops'
 
+    split_setup 'docker'
     split_setup 'scripts'
     split_setup 'docker-images'
     split_setup 'parametor'
