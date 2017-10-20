@@ -7,6 +7,7 @@ Plug 'carlitux/deoplete-ternjs'
 Plug 'zchee/deoplete-go'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'janko-m/vim-test'
 
 " FILETYPE-SPECIFIC
 " ruby
@@ -14,7 +15,6 @@ Plug 'tpope/vim-rbenv'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'ecomba/vim-ruby-refactoring'
-Plug 'Keithbsmiley/rspec.vim'
 
 Plug 'tpope/vim-fugitive'               " git integration
 Plug 'scrooloose/nerdtree'              " tree view of files

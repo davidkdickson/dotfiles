@@ -7,6 +7,7 @@ map <left> <nop>
 map <right> <nop>
 map <leader>r :!ruby %<cr>
 map <leader>ct :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<cr>
+map <leader>cs :!cscope -R . **/*.rb<cr>
 
 " Quickfix navigation
 nnoremap ]q :cnext<CR>
@@ -43,7 +44,11 @@ nnoremap <C-H> <C-W><C-H>
 
 " select last
 nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
-"
-" vim-rspec
-nnoremap <leader>t :Dispatch rspec % --format documentation<cr>
-nnoremap <leader>s :execute "Dispatch rspec %:" . line(".")<cr>
+
+" vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
