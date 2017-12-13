@@ -40,6 +40,7 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinSize=50
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['.git$[[dir]]', '.pyc', '.whl']
+let NERDTreeQuitOnOpen=1
 
 
 " strip whitespace on save
