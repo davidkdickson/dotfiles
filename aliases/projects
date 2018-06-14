@@ -1,3 +1,6 @@
 alias algo='cd ~/Workspace/algorithms'
 alias budget='cd ~/Workspace/budget'
+alias ops='cd ~/Work/compass/ops'
+alias dock='cd ~/Work/compass/docker'
+alias c='cd ~/Work/compass'
 
