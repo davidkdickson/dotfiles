@@ -14,7 +14,6 @@ alias ..='cd ..'
 
 alias dot-files='cd ~/.dot-files; vim -c "NERDTree"'
 alias blog='cd ~/Workspace/Projects/davidkdickson.github.io; vim -c "NERDTree"'
-alias todo='cd ~/todo; vim -c "NERDTree"'
 
 alias vpn-staging='sudo openvpn --config ~/.openvpn/client-staging.ovpn'
 

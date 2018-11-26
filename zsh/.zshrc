@@ -16,5 +16,7 @@ source ~/.dot-files/zsh/ruby
 export PSQL_EDITOR="vim"
 export EDITOR=nvim
 export PATH=~/.dot-files/scripts:$PATH
+# added by Anaconda3 installer
+export PATH="/home/david/anaconda3/bin:$PATH"
 
 eval `keychain -q --agents ssh --eval id_rsa`
