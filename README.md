@@ -2,7 +2,7 @@
 * oh my zsh
 * vim or neovim
 * tmux
-* vundle
+* [plug](https://github.com/junegunn/vim-plug) 
 
 # Install Instructions
 1. `ln ~/.dot-files/zsh/.zshrc ~/.zshrc`
