@@ -5,8 +5,8 @@
 * [plug](https://github.com/junegunn/vim-plug) 
 
 # Install Instructions
-1. `ln ~/.dot-files/zsh/.zshrc ~/.zshrc`
-1. `ln ~/.dot-files/vim/.vimrc ~/.vimrc`
-1. `ln ~/.dot-files/tmux/.tmux.conf ~/.tmux.conf`
-1. `ln ~/.dot-files/psql/.psqlrc ~/.psqlrc`
-1. Launch `vim` and run the vim command `:PluginInstall`
+* `ln ~/.dot-files/zsh/.zshrc ~/.zshrc`
+* `ln ~/.dot-files/tmux/.tmux.conf ~/.tmux.conf`
+* `ln ~/.dot-files/psql/.psqlrc ~/.psqlrc`
+* `ln ~/.dot-files/vim/init.vim ~/.config/nvim/init.vim`
+* Launch `vim` and run the vim command `:PluginInstall`
