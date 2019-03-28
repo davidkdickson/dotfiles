@@ -16,6 +16,9 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'ecomba/vim-ruby-refactoring'
 
+" python
+Plug 'vim-scripts/indentpython.vim'
+
 Plug 'tpope/vim-fugitive'               " git integration
 Plug 'scrooloose/nerdtree'              " tree view of files
 Plug 'christoomey/vim-tmux-navigator'   " navigate tmux panes and vim

@@ -5,9 +5,10 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-map <leader>r :!ruby %<cr>
-map <leader>ct :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<cr>
-map <leader>cs :!cscope -R . **/*.rb<cr>
+"map <leader>p :!ruby %<cr>
+"map <leader>ct :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)<cr>
+" map <leader>cs :!cscope -R . **/*.rb<cr>
+" map <leader>rf :!rspec %<cr>
 
 " Quickfix navigation
 nnoremap ]q :cnext<CR>
@@ -51,5 +52,3 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
-
-map <leader>rf :!rspec %<cr>
