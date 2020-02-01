@@ -36,5 +36,6 @@ unset __conda_setup
 
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 eval "$(rbenv init -)"
