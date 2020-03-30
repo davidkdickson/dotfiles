@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 TERM="xterm-256color"
 ZSH_THEME="steeef"
 COMPLETION_WAITING_DOTS="true"
-plugins=(docker docker-compose zsh-z)
+plugins=(docker docker-compose z)
 source $ZSH/oh-my-zsh.sh
 
 source ~/.dot-files/aliases/aliases
