@@ -1,21 +1,12 @@
 #!/bin/zsh
 
-# meta
+alias vim="nvim"
 alias reload='source ~/.zshrc'
-alias ea='vim ~/.dot-files/aliases/aliases'
-alias ega='vim ~/.dot-files/aliases/git'
-alias erc='vim ~/.dot-files/zshrc'
-
-# utility
 alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
-alias ..='cd ..'
 
 alias dot-files='cd ~/.dot-files; vim -c "NERDTree"'
-alias blog='cd ~/Workspace/Projects/davidkdickson.github.io; vim -c "NERDTree"'
-
-alias vpn-staging='sudo openvpn --config ~/.openvpn/client-staging.ovpn'
 
 # test
 alias t='bundle exec rspec'
@@ -34,5 +25,4 @@ function postgres {
 	fi
 }
 
-alias vim="nvim"
 
