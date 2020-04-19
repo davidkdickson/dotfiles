@@ -10,8 +10,8 @@ for file in ~/.dot-files/zsh/aliases/*; do
 done
 
 source ~/.dot-files/zsh/vi-mode
-source ~/.dot-files/zsh/docker
-source ~/.dot-files/zsh/ruby
+source ~/.dot-files/docker/docker
+source ~/.dot-files/ruby/ruby
 
 export PSQL_EDITOR="vim"
 export EDITOR=nvim
