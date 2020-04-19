@@ -5,9 +5,9 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(docker docker-compose z)
 source $ZSH/oh-my-zsh.sh
 
-source ~/.dot-files/aliases/aliases
-source ~/.dot-files/aliases/projects
-source ~/.dot-files/aliases/git
+source ~/.dot-files/zsh/aliases/aliases
+source ~/.dot-files/zsh/aliases/projects
+source ~/.dot-files/zsh/aliases/git
 
 source ~/.dot-files/zsh/docker
 source ~/.dot-files/zsh/vi-mode
