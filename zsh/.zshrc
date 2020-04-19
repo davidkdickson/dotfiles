@@ -1,13 +1,13 @@
 ZSH=$HOME/.oh-my-zsh
-# TERM="xterm-256color" test
 ZSH_THEME="steeef"
 COMPLETION_WAITING_DOTS="true"
 plugins=(docker docker-compose z)
 source $ZSH/oh-my-zsh.sh
 
-source ~/.dot-files/zsh/aliases/aliases
-source ~/.dot-files/zsh/aliases/projects
-source ~/.dot-files/zsh/aliases/git
+# loop and source aliases
+for file in ~/.dot-files/zsh/aliases/*; do
+  source $file
+done
 
 source ~/.dot-files/zsh/docker
 source ~/.dot-files/zsh/vi-mode
