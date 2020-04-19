@@ -5,17 +5,17 @@ plugins=(docker docker-compose z)
 source $ZSH/oh-my-zsh.sh
 
 # loop and source aliases
-for file in ~/.dot-files/zsh/aliases/*; do
+for file in ~/.dotfiles/zsh/aliases/*; do
   source $file
 done
 
-source ~/.dot-files/zsh/vi-mode
-source ~/.dot-files/docker/docker
-source ~/.dot-files/ruby/ruby
+source ~/.dotfiles/zsh/vi-mode
+source ~/.dotfiles/docker/docker
+source ~/.dotfiles/ruby/ruby
 
 export PSQL_EDITOR="vim"
 export EDITOR=nvim
-export PATH=~/.dot-files/scripts:$PATH
+export PATH=~/.dotfiles/scripts:$PATH
 
 eval `keychain -q --agents ssh --eval id_rsa`
 

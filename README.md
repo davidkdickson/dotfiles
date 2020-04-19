@@ -7,9 +7,9 @@
 * setup specific conda neovim [environment](https://gist.github.com/yeekeiji/8143b9174f87715f95aa14dd99679b5f)
 
 # Install Instructions
-* `ln -s ~/.dot-files/zsh/.zshrc ~/.zshrc`
-* `ln -s ~/.dot-files/tmux/.tmux.conf ~/.tmux.conf`
-* `ln -s ~/.dot-files/vim/init.vim ~/.config/nvim/init.vim`
+* `ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc`
+* `ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf`
+* `ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim`
 
 Launch `nvim` and run:
 * `:PlugInstall`

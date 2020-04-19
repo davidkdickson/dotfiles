@@ -6,7 +6,7 @@ alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
 
-alias dot-files='cd ~/.dot-files; vim -c "NERDTree"'
+alias dotfiles='cd ~/.dotfiles; vim -c "NERDTree"'
 
 # test
 alias t='bundle exec rspec'

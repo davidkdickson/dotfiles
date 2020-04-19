@@ -2,9 +2,9 @@ set nocompatible
 
 filetype plugin indent on
 
-source ~/.dot-files/vim/plugins.vim
-source ~/.dot-files/vim/keymap.vim
-source ~/.dot-files/vim/colors.vim
+source ~/.dotfiles/vim/plugins.vim
+source ~/.dotfiles/vim/keymap.vim
+source ~/.dotfiles/vim/colors.vim
 
 syntax on
 set tabstop=2
