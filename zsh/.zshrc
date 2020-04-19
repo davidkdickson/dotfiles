@@ -1,5 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
-TERM="xterm-256color"
+# TERM="xterm-256color" test
 ZSH_THEME="steeef"
 COMPLETION_WAITING_DOTS="true"
 plugins=(docker docker-compose z)

@@ -1,10 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " General
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'fishbullet/deoplete-ruby'
-Plug 'carlitux/deoplete-ternjs'
-Plug 'zchee/deoplete-go'
+Plug 'Valloric/YouCompleteMe'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'janko-m/vim-test'

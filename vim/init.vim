@@ -58,21 +58,6 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 au VimLeave * call nvim_cursor_set_shape("vertical-bar")
 
-" Deoplete
-let g:deoplete#enable_at_startup=1
-let g:deoplete#enable_refresh_always=0
-let g:deoplete#enable_smart_case=1
-let g:deoplete#file#enable_buffer_path=1
-
-let g:deoplete#sources={}
-let g:deoplete#sources._    = ['around', 'buffer', 'file', 'ultisnips']
-let g:deoplete#sources.ruby = ['around', 'buffer', 'member', 'file', 'ultisnips']
-let g:deoplete#sources.vim  = ['around', 'buffer', 'member', 'file', 'ultisnips']
-let g:deoplete#sources['javascript.jsx'] = ['around', 'buffer', 'file', 'ultisnips', 'ternjs']
-let g:deoplete#sources.css  = ['around', 'buffer', 'member', 'file', 'omni', 'ultisnips']
-let g:deoplete#sources.scss = ['around', 'buffer', 'member', 'file', 'omni', 'ultisnips']
-let g:deoplete#sources.html = ['around', 'buffer', 'member', 'file', 'omni', 'ultisnips']
-
 " Utisnips
 inoremap <C-x><C-k> <NOP>
 let g:UltiSnipsExpandTrigger='<C-j>'
