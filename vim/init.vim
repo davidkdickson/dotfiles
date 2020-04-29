@@ -7,6 +7,7 @@ source ~/.dotfiles/vim/keymap.vim
 source ~/.dotfiles/vim/colors.vim
 
 syntax on
+set encoding=utf-8
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
@@ -34,6 +35,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
 " airline
 let g:airline_theme='one'
 set laststatus=2
@@ -59,7 +61,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 au VimLeave * call nvim_cursor_set_shape("vertical-bar")
 
 " Utisnips
-inoremap <C-x><C-k> <NOP>
+" inoremap <C-x><C-k> <NOP>
 let g:UltiSnipsExpandTrigger='<C-j>'
 let g:UltiSnipsListSnippets='<C-s>'
 let g:UltiSnipsJumpForwardTrigger='<C-j>'
@@ -71,3 +73,7 @@ if !isdirectory("/tmp/.vim-undo-dir")
 endif
 set undodir=/tmp/.vim-undo-dir
 set undofile
+
+
+" YCM
+let g:ycm_global_ycm_extra_conf = '~/dotfiles/vim/ycm_extra_conf.py'
