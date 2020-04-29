@@ -47,7 +47,6 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['.git$[[dir]]', '.pyc', '.whl']
 let NERDTreeQuitOnOpen=1
 
-
 " strip whitespace on save
 autocmd BufWritePre * StripWhitespace
 
@@ -73,7 +72,6 @@ if !isdirectory("/tmp/.vim-undo-dir")
 endif
 set undodir=/tmp/.vim-undo-dir
 set undofile
-
 
 " YCM
 let g:ycm_global_ycm_extra_conf = '~/dotfiles/vim/ycm_extra_conf.py'
