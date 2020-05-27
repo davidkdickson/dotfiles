@@ -8,6 +8,7 @@
 * [neovim](https://github.com/neovim/neovim)
 * setup specific conda neovim [environment](https://gist.github.com/yeekeiji/8143b9174f87715f95aa14dd99679b5f)
 * [autoenv](https://github.com/inishchith/autoenv)
+* [rbenv](https://github.com/rbenv/rbenv)
 
 ## Install Instructions
 * `ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc`
