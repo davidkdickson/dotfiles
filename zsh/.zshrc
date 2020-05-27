@@ -38,4 +38,8 @@ export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.poetry/bin:$PATH"
 
+# load rbenv automatically
 eval "$(rbenv init -)"
+
+# activate autoenv
+source ~/.autoenv/activate.sh

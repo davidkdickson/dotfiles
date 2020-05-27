@@ -5,6 +5,7 @@
 * [conda](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
 * [neovim](https://github.com/neovim/neovim)
 * setup specific conda neovim [environment](https://gist.github.com/yeekeiji/8143b9174f87715f95aa14dd99679b5f)
+* [autoenv](https://github.com/inishchith/autoenv)
 
 # Install Instructions
 * `ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc`
