@@ -12,6 +12,7 @@
 * `ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf`
 * `ln -s ~/.dotfiles/vim/init.vim ~/.config/nvim/init.vim`
 * `ln -s ~/.dotfiles/vim/ftplugin ~/.config/nvim/after/ftplugin`
+* `ln -s ~/.dotfiles/conda/.condarc ~/.condarc
 
 Launch `nvim` and run:
 * `:PlugInstall`
