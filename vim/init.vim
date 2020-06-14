@@ -74,4 +74,10 @@ set undodir=/tmp/.vim-undo-dir
 set undofile
 
 " YCM
-let g:ycm_global_ycm_extra_conf = '~/dotfiles/vim/ycm_extra_conf.py'
+let g:ycm_auto_trigger = 1
+let g:ycm_max_num_candidates = 15
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
+" g:ycm_global_ycm_extra_conf global file
+let g:ycm_extra_conf_globlist = ['~/Workspace/*'] " whitelist config files in this or below
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
