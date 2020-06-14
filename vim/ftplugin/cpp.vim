@@ -26,6 +26,8 @@ autocmd FileType c ClangFormatAutoEnable
 
 map <leader>ct :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --exclude=.git --exclude=log .<cr>
 
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+
 map <leader>g :YcmCompleter GoTo<CR>
 map <leader>gt :YcmCompleter GetType<CR>
 map <leader>gd :YcmCompleter GetDoc<CR>
