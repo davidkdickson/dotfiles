@@ -28,7 +28,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " specific environment for neovim
-let g:python3_host_prog = '/home/david/anaconda3/envs/neovim/bin/python'
+" let g:python3_host_prog = '/home/david/anaconda3/envs/neovim/bin/python'
 
 let g:syntastic_ruby_checkers = ['rubocop', 'rubylint']
 let g:syntastic_always_populate_loc_list = 1
