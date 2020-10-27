@@ -17,7 +17,15 @@ export PSQL_EDITOR="vim"
 export EDITOR=nvim
 export PATH=~/.dotfiles/scripts:$PATH
 
-eval `keychain -q --agents ssh --eval id_rsa`
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+  ;;
+  Linux)
+    # commands for Linux go here
+    eval `keychain -q --agents ssh --eval id_rsa`
+  ;;
+esac
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
