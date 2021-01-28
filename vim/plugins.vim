@@ -34,4 +34,6 @@ Plug 'tomtom/tlib_vim'
 Plug 'ngmy/vim-rubocop'
 Plug 'majutsushi/tagbar'                " ctags toolbar
 Plug 'mtscout6/syntastic-local-eslint.vim'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
