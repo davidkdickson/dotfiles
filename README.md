@@ -1,6 +1,7 @@
 # Dotfiles
 
 ## Perquisites
+* [one dark theme - terminal](https://github.com/denysdovhan/one-gnome-terminal)
 * [oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 * tmux
 * [plug](https://github.com/junegunn/vim-plug)
