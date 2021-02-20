@@ -1,7 +1,7 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="steeef"
 COMPLETION_WAITING_DOTS="true"
-plugins=(docker docker-compose z)
+plugins=(docker colored-man-pages pip pyenv python sudo docker-compose z)
 source $ZSH/oh-my-zsh.sh
 
 # loop and source aliases
@@ -58,3 +58,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
+
+eval "$(starship init zsh)"
+
