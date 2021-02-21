@@ -51,6 +51,17 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 # Spaceship prompt
-SPACESHIP_VI_MODE_SHOW=false
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 
+# Turning off spaceship sections I won't use
+SPACESHIP_HG_SHOW=false
+SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_NODE_SHOW=false
+SPACESHIP_ELM_SHOW=false
+SPACESHIP_ELIXIR_SHOW=false
+SPACESHIP_PHP_SHOW=false
+SPACESHIP_JULIA_SHOW=false
+SPACESHIP_AWS_SHOW=false
+SPACESHIP_DOTNET_SHOW=false
+SPACESHIP_EMBER_SHOW=false
+SPACESHIP_VI_MODE_SHOW=false
