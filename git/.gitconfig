@@ -8,6 +8,8 @@
         ui = true
 [push]
         default = tracking
+[diff]
+	tool = vimdiff
 [alias]
         # log
         l = log --graph --all --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
