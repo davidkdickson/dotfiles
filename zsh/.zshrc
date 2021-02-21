@@ -1,5 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="steeef"
+ZSH_THEME="spaceship"
 COMPLETION_WAITING_DOTS="true"
 plugins=(docker colored-man-pages pip pyenv python sudo docker-compose z)
 source $ZSH/oh-my-zsh.sh
@@ -12,10 +12,6 @@ done
 source ~/.dotfiles/zsh/vi-mode
 source ~/.dotfiles/docker/docker
 source ~/.dotfiles/ruby/ruby
-
-export PSQL_EDITOR="vim"
-export EDITOR=nvim
-export PATH=~/.dotfiles/scripts:$PATH
 
 case `uname` in
   Darwin)
@@ -42,9 +38,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.poetry/bin:$PATH"
 
 # load rbenv automatically
 eval "$(rbenv init -)"
@@ -53,11 +46,11 @@ eval "$(rbenv init -)"
 source ~/.autoenv/activate.sh
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
 
-eval "$(starship init zsh)"
+# Spaceship prompt
+SPACESHIP_VI_MODE_SHOW=false
+SPACESHIP_PROMPT_SEPARATE_LINE=false
 
