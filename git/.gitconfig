@@ -32,6 +32,7 @@
   nomerge = b --no-merge
 
   # committing
+  c = commit
   cm = commit -m
   cam = commit -v -a --amend
 
