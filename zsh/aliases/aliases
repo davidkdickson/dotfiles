@@ -6,10 +6,7 @@ alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
 
-alias dotfiles='cd ~/.dotfiles; vim -c "NERDTree"'
-
-# test
-alias t='bundle exec rspec'
+alias dotfiles='vim -c "NERDTree ~/.dotfiles"'
 
 function listening_port {
 	lsof -n -i4TCP:$1 | grep LISTEN
