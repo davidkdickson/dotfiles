@@ -1,55 +1,56 @@
 [user]
-  name = David Dickson
-  email = davidkdickson@gmail.com
+        name = David Dickson
+        email = davidkdickson@gmail.com
 [core]
-  excludesfile = ./gitignore_global
+        editor = nvim
+        excludesfile = ./gitignore_global
 [color]
-  ui = true
+        ui = true
 [push]
-  default = tracking
+        default = tracking
 [alias]
-  # log
-  l = log --graph --all --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
-  lna = log --graph --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
-  ll = l --stat
+        # log
+        l = log --graph --all --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
+        lna = log --graph --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
+        ll = l --stat
 
-  # status in short format
-  s = status -s
+        # status in short format
+        s = status -s
 
-  # add all changes from tracked and untracked
-  a = add --all .
-  aa = add
+        # add all changes from tracked and untracked
+        a = add --all .
+        aa = add
 
-  # merge without fast forwarding
-  m = merge --no-ff
-  mnc = m --no-commit
+        # merge without fast forwarding
+        m = merge --no-ff
+        mnc = m --no-commit
 
-  # branches
-  b = branch
-  bl = branch --all
-  bd = branch -d
-  merged = b --merged
-  nomerge = b --no-merge
+        # branches
+        b = branch
+        bl = branch --all
+        bd = branch -d
+        merged = b --merged
+        nomerge = b --no-merge
 
-  # committing
-  c = commit
-  cm = commit -m
-  cam = commit -v -a --amend
+        # committing
+        c = commit
+        cm = commit -m
+        cam = commit -v -a --amend
 
-  # push
-  ps = push
-  po = "push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+        # push
+        ps = push
+        po = "push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 
-  # pull
-  pl = pull
-  plr = pull --rebase
+        # pull
+        pl = pull
+        plr = pull --rebase
 
-  co = checkout
-  cob = checkout -b
+        co = checkout
+        cob = checkout -b
 
-  d = diff
-  dt = difftool
-  dc = d --cached
+        d = diff
+        dt = difftool
+        dc = d --cached
 
-  # list aliases
-  ls = config --get-regexp alias | cut -c 7-
+        # list aliases
+        ls = config --get-regexp alias | cut -c 7-
