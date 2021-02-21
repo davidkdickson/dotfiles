@@ -11,7 +11,6 @@ done
 
 source ~/.dotfiles/zsh/vi-mode
 source ~/.dotfiles/docker/docker
-source ~/.dotfiles/ruby/ruby
 
 case `uname` in
   Darwin)
