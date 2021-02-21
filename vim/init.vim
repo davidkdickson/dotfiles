@@ -78,3 +78,6 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 " g:ycm_global_ycm_extra_conf global file
 let g:ycm_extra_conf_globlist = ['~/Workspace/*'] " whitelist config files in this or below
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+
+" spell check git commit messages
+autocmd FileType gitcommit setlocal spell
