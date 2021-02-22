@@ -23,3 +23,6 @@ function postgres {
 }
 
 
+function aws-ecr-login() {
+ $(aws ecr get-login --no-include-email)
+}
