@@ -10,7 +10,6 @@ for file in ~/.dotfiles/zsh/aliases/*; do
 done
 
 source ~/.dotfiles/zsh/vi-mode
-source ~/.dotfiles/docker/docker
 
 case `uname` in
   Darwin)
@@ -39,7 +38,9 @@ unset __conda_setup
 
 
 # load rbenv automatically
-eval "$(rbenv init -)"
+if command -v rbenv 1>/dev/null 2>&1; then
+    eval "$(rbenv init -)"
+fi
 
 # activate autoenv
 source ~/.autoenv/activate.sh

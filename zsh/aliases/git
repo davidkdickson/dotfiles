@@ -1,4 +1,4 @@
-#!/bin/#!/usr/bin/env zsh
+#!/bin/zsh
 IFS=$'\n'
 
 # automatically load git aliases.
