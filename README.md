@@ -6,7 +6,7 @@
 * [Fira code font](https://github.com/tonsky/FiraCode)
 * [neovim](https://github.com/neovim/neovim)
 * [plug](https://github.com/junegunn/vim-plug)
-* tmux
+* [tmux](https://github.com/tmux/tmux)
 * [conda](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
 
 `./bin/prerequisites`
