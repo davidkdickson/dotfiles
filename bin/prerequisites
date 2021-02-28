@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+# installs oh my zsh (see: https://ohmyz.sh/#install)
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+# installs spaceship prompt (https://github.com/denysdovhan/spaceship-prompt)
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+
+# using rbenv installer to install (see: https://github.com/rbenv/rbenv-installer)
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash
+
+
+# pyenv installer to install (see: https://github.com/pyenv/pyenv-installer)
+curl https://pyenv.run | bash
+
+
+# https://github.com/inishchith/autoenv
+git clone git://github.com/inishchith/autoenv.git ~/.autoenv
