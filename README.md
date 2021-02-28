@@ -1,7 +1,6 @@
 # Dotfiles
 
 ## Perquisites
-Install:
 * [one dark - terminal](https://github.com/denysdovhan/one-gnome-terminal)
 * [one dark - iterm2](https://github.com/anunez/one-dark-iterm/blob/master/one-dark.itermcolors)
 * [Fira code font](https://github.com/tonsky/FiraCode)
@@ -10,10 +9,10 @@ Install:
 * tmux
 * [conda](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
 
-Run `./bin/prerequisites`
+`./bin/prerequisites`
 
 ## Installation
-* `./bin/install`
+`./bin/install`
 
 Ruby and neovim provider:
 ```
@@ -36,6 +35,8 @@ pip install neovim
 
 ```
 
-Launch `nvim` and run:
-* `:PlugInstall`
-* `:checkHealth`
+Launch `nvim`:
+```
+:PlugInstall
+:checkHealth
+```
