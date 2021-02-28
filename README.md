@@ -32,7 +32,6 @@ pyenv install 3.9.2
 pyenv virtualenv 3.9.2 neovim3
 pyenv activate neovim3
 pip install neovim
-
 ```
 
 Launch `nvim`:
