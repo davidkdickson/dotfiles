@@ -25,7 +25,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " specific environment for neovim
-" let g:python3_host_prog = '/home/david/anaconda3/envs/neovim/bin/python'
+" disable unused providers
+let g:loaded_node_provider = 0
+let g:python_host_prog = '/home/david/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/home/david/.pyenv/versions/neovim3/bin/python'
 
 let g:syntastic_ruby_checkers = ['rubocop', 'rubylint']
 let g:syntastic_always_populate_loc_list = 1
