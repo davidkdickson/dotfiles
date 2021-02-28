@@ -7,11 +7,11 @@ Terminal theme and font:
 * [Fira code font](https://github.com/tonsky/FiraCode)
 
 Run `./bin/prerequisites` which installs:
+* [oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 * [rbenv](https://github.com/rbenv/rbenv)
 * [pyenv](https://github.com/pyenv/pyenv)
 
 Shell and editor:
-* [oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 * tmux
 * [neovim](https://github.com/neovim/neovim)
 * [plug](https://github.com/junegunn/vim-plug)
