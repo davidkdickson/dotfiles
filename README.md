@@ -25,13 +25,15 @@ Python and neovim provider:
 ```
 pyenv install 2.7.18
 pyenv virtualenv 2.7.18 neovim2
-python activate neovim2
+pyenv activate neovim2
 pip install neovim
 
 pyenv install 3.9.2
 pyenv virtualenv 3.9.2 neovim3
 pyenv activate neovim3
 pip install neovim
+
+pyenv global 3.9.2
 ```
 
 Launch `nvim`:
