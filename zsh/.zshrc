@@ -21,22 +21,6 @@ case `uname` in
   ;;
 esac
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/david/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/david/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/david/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/david/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
 # load rbenv automatically
 if command -v rbenv 1>/dev/null 2>&1; then
     eval "$(rbenv init -)"
@@ -65,3 +49,19 @@ SPACESHIP_AWS_SHOW=false
 SPACESHIP_DOTNET_SHOW=false
 SPACESHIP_EMBER_SHOW=false
 SPACESHIP_VI_MODE_SHOW=false
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/david.dickson/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/david.dickson/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/david.dickson/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/david.dickson/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
