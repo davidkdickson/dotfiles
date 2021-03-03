@@ -25,6 +25,7 @@
 
         # merge without fast forwarding
         m = merge --no-ff
+        ms = merge --squash     # squash multiple commits into one
         mnc = m --no-commit
 
         # branches
