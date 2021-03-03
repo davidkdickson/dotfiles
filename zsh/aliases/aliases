@@ -6,6 +6,7 @@ alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
 alias tm='tmux new-session -n $(basename $PWD)'
+alias tmux='tmux new-session -n $(basename $PWD)'
 
 alias dotfiles='vim -c "NERDTree ~/.dotfiles"'
 
