@@ -5,6 +5,7 @@ filetype plugin indent on
 source ~/.dotfiles/vim/plugins.vim
 source ~/.dotfiles/vim/keymap.vim
 source ~/.dotfiles/vim/colors.vim
+source ~/.dotfiles/vim/coc.vim
 
 syntax on
 set encoding=utf-8

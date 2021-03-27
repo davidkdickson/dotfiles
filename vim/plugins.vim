@@ -27,8 +27,6 @@ Plug 'rakr/vim-one'
 Plug 'vim-airline/vim-airline'          " airline status bar
 Plug 'vim-airline/vim-airline-themes'   " airline themes
 Plug 'craigemery/vim-autotag'           " automatically update ctags on saving
-Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-endwise'                " automatically add end to functions
 Plug 'ntpeters/vim-better-whitespace'   " highlight trailing whitespace
 Plug 'tomtom/tlib_vim'
 Plug 'ngmy/vim-rubocop'
