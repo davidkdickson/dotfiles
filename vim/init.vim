@@ -60,28 +60,12 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 au VimLeave * call nvim_cursor_set_shape("vertical-bar")
 
-" Utisnips
-" inoremap <C-x><C-k> <NOP>
-let g:UltiSnipsExpandTrigger='<C-j>'
-let g:UltiSnipsListSnippets='<C-s>'
-let g:UltiSnipsJumpForwardTrigger='<C-j>'
-let g:UltiSnipsJumpBackwardTrigger='<C-k>'
-
 " persistent undo
 if !isdirectory("/tmp/.vim-undo-dir")
     call mkdir("/tmp/.vim-undo-dir", "", 0700)
 endif
 set undodir=/tmp/.vim-undo-dir
 set undofile
-
-" YCM
-let g:ycm_auto_trigger = 1
-let g:ycm_max_num_candidates = 15
-let g:ycm_autoclose_preview_window_after_insertion = 1
-
-" g:ycm_global_ycm_extra_conf global file
-let g:ycm_extra_conf_globlist = ['~/Workspace/*'] " whitelist config files in this or below
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
 " spell check git commit messages
 autocmd FileType gitcommit setlocal spell
