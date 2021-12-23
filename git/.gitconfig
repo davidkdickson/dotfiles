@@ -57,3 +57,5 @@
 
         # list aliases
         ls = config --get-regexp alias | cut -c 7-
+[init]
+	defaultBranch = main
