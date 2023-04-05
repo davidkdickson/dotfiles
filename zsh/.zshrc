@@ -2,6 +2,13 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="spaceship"
 COMPLETION_WAITING_DOTS="true"
 plugins=(docker colored-man-pages pip pyenv python sudo docker-compose z)
+
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init --path)"
+fi
 source $ZSH/oh-my-zsh.sh
 
 # loop and source aliases
@@ -29,11 +36,6 @@ fi
 # activate autoenv
 source ~/.autoenv/activate.sh
 
-# pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init --path)"
-fi
-
 # Spaceship prompt
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 
@@ -52,14 +54,14 @@ SPACESHIP_VI_MODE_SHOW=false
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('${HOME}/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/daviddickson/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "${HOME}/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/daviddickson/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/daviddickson/mambaforge/etc/profile.d/conda.sh"
     else
-        export PATH="${HOME}/miniconda3/bin:$PATH"
+        export PATH="/Users/daviddickson/mambaforge/bin:$PATH"
     fi
 fi
 unset __conda_setup
