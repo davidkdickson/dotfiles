@@ -1,8 +1,6 @@
 # Dotfiles
 
 ## Perquisites
-* [one dark - terminal](https://github.com/denysdovhan/one-gnome-terminal)
-* [one dark - iterm2](https://github.com/anunez/one-dark-iterm/blob/master/one-dark.itermcolors)
 * [neovim](https://github.com/neovim/neovim)
 * [plug](https://github.com/junegunn/vim-plug)
 
