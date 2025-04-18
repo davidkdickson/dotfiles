@@ -19,9 +19,9 @@ gem install neovim
 Python and neovim provider:
 ```
 pyenv install 3.13.3
-pyenv virtualenv 3.13.3 neovim3
-pyenv activate neovim3
-pip install neovim
+pyenv virtualenv 3.13.3 py3nvim
+pyenv activate py3nvim
+pip install pynvim
 
 pyenv global 3.13.3
 ```
