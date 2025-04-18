@@ -1,0 +1,20 @@
+# Commit Message Guide
+#
+# 1. Summary (50-72 characters, imperative mood)
+#    Example:
+#    - Add user authentication
+#    - Fix crash when saving invoice
+#    - Refactor API response handling
+#
+# 2. Description (Optional, explain the "why" and "what" if needed)
+#    - Provide context for the change, if not obvious
+#    - Mention key changes, but keep it concise
+#    - Use bullet points for clarity
+#
+# 3. References (Optional: link to issues, PRs, or co-authors)
+#    - Fixes #123 (if this commit resolves an issue)
+#    - Closes #456 (if it closes a PR)
+#    - Related to #789 (if it's connected but not a fix)
+#
+# ------------- Start your commit message below this line -------------
+
