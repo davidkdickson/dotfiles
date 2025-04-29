@@ -57,6 +57,7 @@
 
         # list aliases
         ls = config --get-regexp alias | cut -c 7-
+	portfolio = !git add . && git commit -m \"update: portfolio data + allocation analysis ($(date +%Y-%m-%d))\"
 [init]
         defaultBranch = main
 [commit]
