@@ -2,14 +2,14 @@
         name = David Dickson
         email = davidkdickson@gmail.com
 [core]
-        editor = code --wait
+        editor = cursor --wait
         excludesfile = ./gitignore_global
 [color]
         ui = true
 [push]
         default = tracking
 [diff]
-	tool = vscode
+	tool = cursor
 [alias]
         # log
         l = log --graph --all --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
@@ -62,3 +62,8 @@
         defaultBranch = main
 [commit]
         template = ~/.gitmessage
+[difftool]
+        prompt = false
+[difftool "cursor"]
+        cmd = /usr/local/bin/cursor --wait --diff "$LOCAL" "$REMOTE"
+        trustExitCode = true
