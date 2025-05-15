@@ -2,14 +2,14 @@
         name = David Dickson
         email = davidkdickson@gmail.com
 [core]
-        editor = nvim
+        editor = code --wait
         excludesfile = ./gitignore_global
 [color]
         ui = true
 [push]
         default = tracking
 [diff]
-	tool = vimdiff
+	tool = vscode
 [alias]
         # log
         l = log --graph --all --pretty=format:'%C(auto)%h -%d%Creset %s %C(dim green)[%cr] %C(bold blue)%an%Creset'
