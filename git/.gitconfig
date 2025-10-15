@@ -42,7 +42,7 @@
 
         # push
         ps = push
-        po = "push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+	po = !git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)
 
         # pull
         pl = pull
@@ -58,6 +58,7 @@
         # list aliases
         ls = !git config --get-regexp alias | cut -c 7-
 	portfolio = !git add . && git commit -m \"update: portfolio data + allocation analysis ($(date +%Y-%m-%d))\"
+        statement = !git add . && git commit -m \"update: finance data + position analysis ($(date +%Y-%b))\"
 [init]
         defaultBranch = main
 [commit]
