@@ -60,6 +60,7 @@
         ls = !git config --get-regexp alias | cut -c 7-
 	portfolio = !git add . && git commit -m \"update: portfolio data + allocation analysis ($(date +%Y-%m-%d))\"
         statement = !git add . && git commit -m \"update: finance data + position analysis ($(date +%Y-%b))\"
+	worktree-remove-cursor = "!git worktree list && echo \"--- Removing Cursor worktrees and branches ---\" && git worktree list --porcelain | awk 'BEGIN {wt=\"\"} /^worktree/ {wt=$2} /^branch/ && wt ~ /\\.cursor\\/worktrees/ {branch=$2; gsub(/refs\\/heads\\//, \"\", branch); print wt \"|\" branch}' | while IFS=\"|\" read -r worktree branch; do if [ -n \"$worktree\" ] && [ -n \"$branch\" ]; then echo \"Removing worktree: $worktree (branch: $branch)\"; git worktree remove \"$worktree\" --force; git branch -D \"$branch\" 2>/dev/null || echo \"  Branch $branch already deleted or doesn't exist\"; fi; done"
 [init]
         defaultBranch = main
 [commit]
