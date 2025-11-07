@@ -12,3 +12,11 @@ ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/git/.gitmessage ~/.gitmessage
 
+# Create LaunchAgents directory if it doesn't exist
+mkdir -p ~/Library/LaunchAgents
+
+# Symlink the plist file
+ln -sf ~/.dotfiles/com.user.remapCapsLock.plist ~/Library/LaunchAgents/com.user.remapCapsLock.plist
+
+# Load the launch agent
+launchctl load ~/Library/LaunchAgents/com.user.remapCapsLock.plist
