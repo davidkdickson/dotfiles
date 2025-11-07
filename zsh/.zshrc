@@ -74,8 +74,8 @@ plugins=(git docker colored-man-pages pip pyenv python sudo docker-compose z)
 
 source $ZSH/oh-my-zsh.sh
 
-# Set cursor to underscore shape (for terminals that don't inherit iTerm settings)
-echo -ne '\033[3 q'
+# Set cursor to vertical bar (for terminals that don't inherit iTerm settings)
+echo -ne '\033[6 q'
 
 # User configuration
 
