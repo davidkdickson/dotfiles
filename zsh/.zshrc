@@ -118,6 +118,12 @@ SPACESHIP_AWS_SHOW=false
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Override oh-my-zsh's 'g' alias with a function (do this after all aliases are loaded)
+unalias g 2>/dev/null
+function g() {
+  git "$@"
+}
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
