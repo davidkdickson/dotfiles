@@ -85,6 +85,13 @@ for file in ~/.dotfiles/zsh/aliases/*; do
 done
 
 source ~/.dotfiles/zsh/vi-mode
+
+# Auto-update Spaceship custom theme as custom themes aren't automatically updated by Oh My Zsh's auto-update
+if [ -d "$ZSH_CUSTOM/themes/spaceship-prompt" ]; then
+  # Update Spaceship in background (silently, only if there are updates)
+  (cd "$ZSH_CUSTOM/themes/spaceship-prompt" && git fetch -q origin master && git pull -q origin master &) 2>/dev/null
+fi
+
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 SPACESHIP_HG_SHOW=false
 SPACESHIP_PACKAGE_SHOW=false
@@ -93,6 +100,7 @@ SPACESHIP_ELIXIR_SHOW=false
 SPACESHIP_PHP_SHOW=false
 SPACESHIP_JULIA_SHOW=false
 SPACESHIP_AWS_SHOW=false
+SPACESHIP_CONDA_SHOW=false
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
