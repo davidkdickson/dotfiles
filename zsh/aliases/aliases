@@ -10,8 +10,57 @@ alias tmux='tmux new-session -n $(basename $PWD)'
 
 alias dotfiles='vim -c "NERDTree ~/.dotfiles"'
 
+# Example usage:
+# kill $(listening_port 8080)
+# kill $(listening_port 8000-8010)
 function listening_port {
-	lsof -n -i4TCP:$1 | grep LISTEN
+	local port_arg=$1
+	local pids=()
+
+	if [[ -z $port_arg ]]; then
+		echo "Usage: listening_port <port> or listening_port <start>-<end>" >&2
+		return 1
+	fi
+
+	# Check if port range is provided (format: start-end)
+	if [[ $port_arg =~ ^([0-9]+)-([0-9]+)$ ]]; then
+		local start_port=${match[1]}
+		local end_port=${match[2]}
+
+		# Validate range
+		if [[ $start_port -gt $end_port ]]; then
+			echo "Error: Start port must be less than or equal to end port" >&2
+			return 1
+		fi
+
+		# Check each port in the range
+		for port in {$start_port..$end_port}; do
+			local result=$(lsof -n -i4TCP:$port 2>/dev/null | grep LISTEN | awk '{print $2}')
+			if [[ -n $result ]]; then
+				# Add unique PIDs to array
+				for pid in ${(f)result}; do
+					if [[ ! ${pids[(ie)$pid]} -le ${#pids} ]]; then
+						pids+=($pid)
+					fi
+				done
+			fi
+		done
+	else
+		# Single port
+		local result=$(lsof -n -i4TCP:$port_arg 2>/dev/null | grep LISTEN | awk '{print $2}')
+		if [[ -n $result ]]; then
+			for pid in ${(f)result}; do
+				if [[ ! ${pids[(ie)$pid]} -le ${#pids} ]]; then
+					pids+=($pid)
+				fi
+			done
+		fi
+	fi
+
+	# Return space-separated PIDs for easy use with kill command
+	if [[ ${#pids} -gt 0 ]]; then
+		echo ${pids[@]}
+	fi
 }
 
 function postgres {
