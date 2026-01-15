@@ -60,7 +60,7 @@
         ls = !git config --get-regexp alias | cut -c 7-
 	portfolio = !git add . && git commit -m \"update: portfolio data + allocation analysis ($(date +%Y-%m-%d))\"
         statement = !git add . && git commit -m \"update: finance data + position analysis ($(date +%Y-%b))\"
-	worktree-remove-cursor = "!git worktree list && echo \"--- Removing Cursor worktrees and branches ---\" && git worktree list --porcelain | awk 'BEGIN {wt=\"\"} /^worktree/ {wt=$2} /^branch/ && wt ~ /\\.cursor\\/worktrees/ {branch=$2; gsub(/refs\\/heads\\//, \"\", branch); print wt \"|\" branch}' | while IFS=\"|\" read -r worktree branch; do if [ -n \"$worktree\" ] && [ -n \"$branch\" ]; then echo \"Removing worktree: $worktree (branch: $branch)\"; git worktree remove \"$worktree\" --force; git branch -D \"$branch\" 2>/dev/null || echo \"  Branch $branch already deleted or doesn't exist\"; fi; done"
+	worktree-remove-cursor = "!git worktree list && echo \"--- Removing Cursor worktrees ---\" && git worktree list --porcelain | awk 'BEGIN {wt=\"\"; branch=\"\"} /^worktree/ {if (wt ~ /\\.cursor\\/worktrees/) print wt \"|\" branch; wt=$2; branch=\"\"} /^branch/ {branch=$2; gsub(/refs\\/heads\\//, \"\", branch)} /^detached/ {branch=\"\"} END {if (wt ~ /\\.cursor\\/worktrees/) print wt \"|\" branch}' | while IFS=\"|\" read -r worktree branch; do if [ -n \"$worktree\" ]; then if [ -n \"$branch\" ]; then echo \"Removing worktree: $worktree (branch: $branch)\"; else echo \"Removing worktree: $worktree (detached)\"; fi; git worktree remove \"$worktree\" --force; if [ -n \"$branch\" ]; then git branch -D \"$branch\" 2>/dev/null || echo \"  Branch $branch already deleted or doesn't exist\"; fi; fi; done"
 [init]
         defaultBranch = main
 [commit]
