@@ -12,6 +12,8 @@ ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/git/.gitmessage ~/.gitmessage
 
+ln -s ~/.dotfiles/psql/.psqlrc ~/.psqlrc
+
 # Create LaunchAgents directory if it doesn't exist
 mkdir -p ~/Library/LaunchAgents
 
