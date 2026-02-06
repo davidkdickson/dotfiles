@@ -23,4 +23,5 @@ ln -sf ~/.dotfiles/com.user.remapCapsLock.plist ~/Library/LaunchAgents/com.user.
 # Load the launch agent
 launchctl load ~/Library/LaunchAgents/com.user.remapCapsLock.plist
 
- ln -s ~/.dotfiles/cursor/commands ~/.cursor/commands
+ ln -s ~/.dotfiles/agent/commands ~/.cursor/commands
+ ln -s ~/.dotfiles/agent/commands ~/.claude/commands
