@@ -14,9 +14,9 @@ The description should be in sentence case.
 1. **Write PR description**
    - Summarize changes clearly and concisely
    - Include context and motivation when it makes sense
-   - Do NOT include Co-Authored-By or any agent attribution in the pull request
+   - Do NOT include Co-Authored-By or any agent attribution in the PR description
 
 3. **Set up PR**
-   - Create PR with descriptive title using the following format <type>(optional scope): <Description>
+   - Create PR using `gh pr create` with the `--editor` flag using the following format <type>(optional scope): <Description>
    - Add appropriate labels (feature, bug or chore)
    - Assign the PR to me
