@@ -35,4 +35,6 @@ Plug 'majutsushi/tagbar'                " ctags toolbar
 Plug 'mtscout6/syntastic-local-eslint.vim'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
