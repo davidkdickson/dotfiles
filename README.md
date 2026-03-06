@@ -1,5 +1,15 @@
 # Dotfiles
 
+## Components
+- **ghostty** - Terminal emulator config
+- **git** - Git config, global gitignore, and commit template
+- **nvim** - Neovim config with lazy.nvim, LSP, Telescope, Treesitter, and Catppuccin
+- **tmux** - Tmux config with vim-style navigation and Catppuccin theme
+- **zsh** - Shell config with aliases, Starship prompt, and zoxide
+- **starship** - Starship prompt config
+- **psql** - PostgreSQL client config
+- **agent** - Shared commands for Claude Code and Cursor
+
 ## Prerequisites
 ```
 brew install --cask ghostty
