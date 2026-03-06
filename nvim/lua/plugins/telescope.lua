@@ -13,6 +13,7 @@ return {
     { "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Document symbols" },
     { "<leader>fr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
     { "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
+    { "<leader>fa", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find all files (hidden)" },
   },
   config = function()
     local telescope = require("telescope")
