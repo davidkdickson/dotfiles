@@ -24,7 +24,7 @@ ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/git/.gitmessage ~/.gitmessage
 ln -s ~/.dotfiles/psql/.psqlrc ~/.psqlrc
-ln -s ~/.dotfiles/ghostty/config ~/.config/ghostty/config
+ln -s ~/.dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 ln -s ~/.dotfiles/com.user.remapCapsLock.plist ~/Library/LaunchAgents/com.user.remapCapsLock.plist
 ln -s ~/.dotfiles/agent/commands ~/.cursor/commands

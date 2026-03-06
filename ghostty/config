@@ -1,3 +1,10 @@
+theme = Catppuccin Mocha
+
 font-family = MonaspiceNe Nerd Font
 font-size = 14
-theme = Catppuccin Mocha
+
+window-width = 95
+window-height = 50
+
+window-position-x = 0
+window-position-y = 0
