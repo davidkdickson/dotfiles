@@ -1,0 +1,33 @@
+[main]
+# Display NULL values
+null_string = [NULL]
+
+# Auto-expand wide tables
+auto_expand = True
+
+# Show query execution time
+timing = True
+
+# Enable multi-line mode
+multi_line = False
+
+# Syntax highlighting style
+syntax_style = one-dark
+
+# Wider completion menu
+wider_completion_menu = False
+
+# Row limit (0 = no limit)
+row_limit = 1000
+
+# Less pager with better defaults
+pager = less -S -X -F
+
+# History size
+max_input_length = 10000
+
+# Keyword casing (auto, upper, lower)
+keyword_casing = upper
+
+# Enable destructive warning for DROP, DELETE, etc.
+destructive_warning = all

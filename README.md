@@ -7,7 +7,7 @@
 - **tmux** - Tmux config with vim-style navigation and Catppuccin theme
 - **zsh** - Shell config with aliases, Starship prompt, and zoxide
 - **starship** - Starship prompt config
-- **psql** - PostgreSQL client config
+- **pgcli** - PostgreSQL client config (pgcli)
 - **agent** - Shared commands for Claude Code and Cursor
 
 ## Prerequisites
@@ -21,6 +21,7 @@ brew install pyenv
 brew install eza
 brew install ripgrep
 brew install zoxide
+brew install pgcli
 brew install git-delta
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
@@ -35,7 +36,8 @@ ln -s ~/.dotfiles/nvim ~/.config/nvim
 ln -s ~/.dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/git/.gitignore_global ~/.gitignore_global
 ln -s ~/.dotfiles/git/.gitmessage ~/.gitmessage
-ln -s ~/.dotfiles/psql/.psqlrc ~/.psqlrc
+mkdir -p ~/.config/pgcli
+ln -s ~/.dotfiles/pgcli/config ~/.config/pgcli/config
 ln -s ~/.dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 ln -s ~/.dotfiles/com.user.remapCapsLock.plist ~/Library/LaunchAgents/com.user.remapCapsLock.plist
