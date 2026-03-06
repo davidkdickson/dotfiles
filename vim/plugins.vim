@@ -37,4 +37,16 @@ Plug 'mtscout6/syntastic-local-eslint.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'olimorris/onedarkpro.nvim'
+Plug 'ydkulks/cursor-dark.nvim'
 call plug#end()
+
+lua << EOF
+require('nvim-treesitter').install({ "python", "lua", "vim", "vimdoc", "markdown", "ruby", "c", "cpp", "javascript", "typescript", "bash" })
+
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(args)
+    pcall(vim.treesitter.start, args.buf)
+  end,
+})
+EOF

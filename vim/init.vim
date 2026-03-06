@@ -37,7 +37,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " airline
-let g:airline_theme='one'
+let g:airline_theme='onedark'
 set laststatus=2
 
 " NERDTree
