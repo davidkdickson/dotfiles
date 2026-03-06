@@ -8,6 +8,7 @@ brew install starship
 brew install neovim
 brew install rbenv
 brew install pyenv
+brew install zoxide
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
