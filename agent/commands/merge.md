@@ -6,3 +6,4 @@
 3. **Switch to main** - Run `git checkout main`
 4. **Pull latest** - Run `git pull`
 5. **Delete local branch** - Run `git branch -D <branch-name>` using the branch name from step 1
+6. **Prune remote branches** - Run `git fetch --prune`

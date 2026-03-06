@@ -14,6 +14,7 @@ return {
     { "<leader>fr", "<cmd>Telescope lsp_references<cr>", desc = "References" },
     { "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics" },
     { "<leader>fa", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find all files (hidden)" },
+    { "<leader>fG", "<cmd>Telescope live_grep additional_args={'--hidden'}<cr>", desc = "Live grep (hidden)" },
   },
   config = function()
     local telescope = require("telescope")
