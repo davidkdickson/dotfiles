@@ -8,7 +8,6 @@ brew install starship
 brew install neovim
 brew install rbenv
 brew install pyenv
-brew install autoenv
 ```
 
 ## Installation
