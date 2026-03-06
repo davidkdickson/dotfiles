@@ -1,3 +1,5 @@
+autoload -Uz compinit && compinit
+
 # loop and source aliases
 for file in ~/.dotfiles/zsh/aliases/*; do
   source $file

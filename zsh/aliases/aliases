@@ -5,6 +5,8 @@ alias reload='source ~/.zshrc'
 alias a='ls -A' # -A all except literal . ..
 alias la="ls -A -l -G"
 alias c='clear'
+alias ..='cd ..'
+alias ...='cd ../..'
 alias tm='tmux new-session -n $(basename $PWD)'
 
 alias dotfiles='vim -c "NERDTree ~/.dotfiles"'
