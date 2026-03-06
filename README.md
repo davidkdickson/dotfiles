@@ -9,6 +9,7 @@ brew install neovim
 brew install node
 brew install pyenv
 brew install zoxide
+brew install git-delta
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
