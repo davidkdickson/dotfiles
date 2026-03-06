@@ -31,14 +31,4 @@ ln -s ~/.dotfiles/agent/commands ~/.cursor/commands
 ln -s ~/.dotfiles/agent/commands ~/.claude/commands
 ```
 
-Python and neovim provider:
-```
-pyenv install 3.13.3
-pyenv virtualenv 3.13.3 py3nvim
-pyenv activate py3nvim
-pip install pynvim
-
-pyenv global 3.13.3
-```
-
 Launch `nvim` and plugins will install automatically via lazy.nvim. LSP servers (pyright, ts_ls, bashls) will be installed by Mason on first run. Run `:checkhealth` to verify.
