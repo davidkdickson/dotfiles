@@ -2,8 +2,10 @@
 
 alias vim="nvim"
 alias reload='source ~/.zshrc'
-alias a='ls -A' # -A all except literal . ..
-alias la="ls -A -l -G"
+alias ls="eza --icons"
+alias ll="eza -l --icons --git"
+alias la="eza -la --icons --git"
+alias lt="eza --tree --icons --level=2"
 alias c='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
