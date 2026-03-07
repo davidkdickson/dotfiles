@@ -16,6 +16,11 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
+-- reload files changed outside of nvim
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter" }, {
+  command = "checktime",
+})
+
 -- highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()

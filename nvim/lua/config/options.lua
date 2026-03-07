@@ -17,6 +17,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.scrolloff = 8
+vim.opt.autoread = true
 
 -- persistent undo
 vim.opt.undofile = true
