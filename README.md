@@ -8,21 +8,12 @@
 - **zsh** - Shell config with aliases, Starship prompt, and zoxide
 - **starship** - Starship prompt config
 - **pgcli** - PostgreSQL client config (pgcli)
+- **macos** - macOS system config (Caps Lock remap via launchd)
 - **agent** - Shared commands for Claude Code and Cursor
 
 ## Prerequisites
 ```
-brew install --cask ghostty
-brew install --cask font-monaspace-nerd-font
-brew install starship
-brew install neovim
-brew install node
-brew install pyenv
-brew install eza
-brew install ripgrep
-brew install zoxide
-brew install pgcli
-brew install git-delta
+brew bundle
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
@@ -40,7 +31,7 @@ mkdir -p ~/.config/pgcli
 ln -s ~/.dotfiles/pgcli/config ~/.config/pgcli/config
 ln -s ~/.dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
-ln -s ~/.dotfiles/com.user.remapCapsLock.plist ~/Library/LaunchAgents/com.user.remapCapsLock.plist
+ln -s ~/.dotfiles/macos/com.user.remapCapsLock.plist ~/Library/LaunchAgents/com.user.remapCapsLock.plist
 ln -s ~/.dotfiles/agent/commands ~/.cursor/commands
 ln -s ~/.dotfiles/agent/commands ~/.claude/commands
 ```

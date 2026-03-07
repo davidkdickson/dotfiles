@@ -1,0 +1,12 @@
+cask "ghostty"
+cask "font-monaspace-nerd-font"
+
+brew "starship"
+brew "neovim"
+brew "node"
+brew "pyenv"
+brew "eza"
+brew "ripgrep"
+brew "zoxide"
+brew "pgcli"
+brew "git-delta"
