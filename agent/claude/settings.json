@@ -2,10 +2,11 @@
   "skipDangerousModePermissionPrompt": true,
   "permissions": {
     "allow": [
-      "Bash(git:*)",
-      "Bash(gh:*)",
-      "Bash(bun:*)",
-      "Bash(npm:*)",
+      "Bash(git *)",
+      "Bash(gh *)",
+      "Bash(bun *)",
+      "Bash(npm *)",
+      "Bash(command *)",
       "Read",
       "Edit",
       "Write",
