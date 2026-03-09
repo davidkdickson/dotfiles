@@ -21,7 +21,7 @@ wider_completion_menu = False
 row_limit = 1000
 
 # Less pager with better defaults
-pager = less -S -X -F
+pager = less -X -F
 
 # History size
 max_input_length = 10000
