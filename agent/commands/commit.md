@@ -18,5 +18,4 @@ The type of the commit can be (feat, fix, or chore). The Description should be i
    - Do NOT include Co-Authored-By or any agent attribution in the commit message
 
 3. **Run git commit**
-   - Run git commit using `git commit -e -m` 
-   - This allows review of the message in my default editor
+   - Run git commit using `git commit -m`
