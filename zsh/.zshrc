@@ -21,3 +21,5 @@ fi
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
+
+export BAT_THEME="Catppuccin Mocha"
