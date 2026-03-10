@@ -1,5 +1,4 @@
 {
-  "skipDangerousModePermissionPrompt": true,
   "permissions": {
     "allow": [
       "Bash(git *)",
@@ -15,5 +14,17 @@
       "Glob",
       "Grep"
     ]
+  },
+  "extraKnownMarketplaces": {
+    "apple-notes-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "peerasak-u/apple-notes-skill"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "enabledPlugins": {
+    "apple-notes@apple-notes-marketplace": true
   }
 }

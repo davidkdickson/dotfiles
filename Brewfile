@@ -3,6 +3,8 @@ cask "font-monaspace-nerd-font"
 
 brew "starship"
 brew "neovim"
+brew "tree-sitter"
+brew "tree-sitter-cli"
 brew "node"
 brew "pyenv"
 brew "eza"
