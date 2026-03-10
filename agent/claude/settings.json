@@ -3,9 +3,11 @@
   "permissions": {
     "allow": [
       "Bash(git *)",
+      "Bash(git:*)",
       "Bash(gh *)",
       "Bash(bun *)",
       "Bash(npm *)",
+      "Bash(docker exec:*)",
       "Bash(command *)",
       "Read",
       "Edit",
