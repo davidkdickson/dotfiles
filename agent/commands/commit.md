@@ -1,9 +1,11 @@
 # Commit
 
 ## Overview
-Create a well-structured git commit using the Conventional Commits specification. 
+Create a well-structured git commit using the Conventional Commits specification.
 
-<type>(optional scope): <Description>
+<type>(optional scope): <Title>
+<type>(optional scope): <Description> where the description focuses on the "why" behind the change
+
 
 [optional body]
 
