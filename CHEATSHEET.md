@@ -1,5 +1,14 @@
 # Dotfiles Cheat Sheet
 
+## Things to Remember
+
+| Key / Command | App | Action |
+|---------------|-----|--------|
+| `<Leader>r` | Neovim (Oil) | Refresh file explorer |
+| `<Leader>h` | Neovim (Oil) | Toggle hidden files |
+
+---
+
 ## Shell (Zsh)
 
 ### File Listing (eza)

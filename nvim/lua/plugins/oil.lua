@@ -11,6 +11,7 @@ return {
       ["<C-l>"] = false,
       -- Remap toggle hidden from C-h to <leader>h
       ["<leader>h"] = "actions.toggle_hidden",
+      ["<leader>r"] = "actions.refresh",
     },
   },
   keys = {
