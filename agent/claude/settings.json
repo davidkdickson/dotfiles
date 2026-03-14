@@ -15,14 +15,6 @@
       "Grep"
     ]
   },
-  "extraKnownMarketplaces": {
-    "apple-notes-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "peerasak-u/apple-notes-skill"
-      }
-    }
-  },
   "hooks": {
     "Notification": [
       {
@@ -36,8 +28,9 @@
       }
     ]
   },
-  "skipDangerousModePermissionPrompt": true,
   "enabledPlugins": {
-    "apple-notes@apple-notes-marketplace": true
-  }
+    "sentry@claude-plugins-official": true,
+    "apple-notes@claude-plugins-official": true
+  },
+  "skipDangerousModePermissionPrompt": true
 }
