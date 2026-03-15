@@ -1,5 +1,5 @@
 ---
-name: todos-opez
+name: todo-opez
 description: List open todo items from the "💥 Todo: Opez" Apple Notes note
 allowed-tools: mcp__apple-notes__get_note_content
 ---

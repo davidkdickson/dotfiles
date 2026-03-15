@@ -1,5 +1,5 @@
 ---
-name: todos-opez-cleanup
+name: todo-opez-clean
 description: Restructure the "💥 Todo: Opez" Apple Notes note into the standard format with typed, sectioned items
 allowed-tools: mcp__apple-notes__get_note_content, mcp__apple-notes__update_note_content, AskUserQuestion
 ---
