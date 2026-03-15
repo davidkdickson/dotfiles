@@ -9,7 +9,7 @@
 - **starship** - Starship prompt config
 - **pgcli** - PostgreSQL client config (pgcli)
 - **macos** - macOS system config (Caps Lock remap via launchd)
-- **agent** - Shared commands for Claude Code and Cursor
+- **agent** - Shared skills/commands for Claude Code and Cursor
 
 ## Prerequisites
 ```
@@ -33,7 +33,7 @@ ln -s ~/.dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.gh
 ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 ln -s ~/.dotfiles/macos/com.user.remapCapsLock.plist ~/Library/LaunchAgents/com.user.remapCapsLock.plist
 ln -s ~/.dotfiles/agent/commands ~/.cursor/commands
-ln -s ~/.dotfiles/agent/commands ~/.claude/commands
+ln -s ~/.dotfiles/agent/skills ~/.claude/skills
 ln -s ~/.dotfiles/agent/claude/settings.json ~/.claude/settings.json
 ```
 
