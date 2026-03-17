@@ -38,6 +38,7 @@ ln -s ~/.dotfiles/agent/claude/settings.json ~/.claude/settings.json
 ln -s ~/.dotfiles/agent/claude/keybindings.json ~/.claude/keybindings.json
 ln -s ~/.dotfiles/agent/claude/known_marketplaces.json ~/.claude/plugins/known_marketplaces.json
 ln -s ~/.dotfiles/agent/claude/installed_plugins.json ~/.claude/plugins/installed_plugins.json
+ln -s ~/.dotfiles/agent/claude/.mcp.json ~/.mcp.json
 ```
 
 Launch `nvim` and plugins will install automatically via lazy.nvim. LSP servers (pyright, ts_ls, bashls) will be installed by Mason on first run. Run `:checkhealth` to verify.

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "apple-notes": {
+      "command": "node",
+      "args": ["/Users/daviddickson/Library/Application Support/Claude/Claude Extensions/ant.dir.ant.anthropic.notes/server/index.js"],
+      "env": {
+        "HOME": "/Users/daviddickson"
+      }
+    }
+  }
+}
