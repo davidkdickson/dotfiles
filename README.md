@@ -35,6 +35,9 @@ ln -s ~/.dotfiles/macos/com.user.remapCapsLock.plist ~/Library/LaunchAgents/com.
 ln -s ~/.dotfiles/agent/commands ~/.cursor/commands
 ln -s ~/.dotfiles/agent/skills ~/.claude/skills
 ln -s ~/.dotfiles/agent/claude/settings.json ~/.claude/settings.json
+ln -s ~/.dotfiles/agent/claude/keybindings.json ~/.claude/keybindings.json
+ln -s ~/.dotfiles/agent/claude/known_marketplaces.json ~/.claude/plugins/known_marketplaces.json
+ln -s ~/.dotfiles/agent/claude/installed_plugins.json ~/.claude/plugins/installed_plugins.json
 ```
 
 Launch `nvim` and plugins will install automatically via lazy.nvim. LSP servers (pyright, ts_ls, bashls) will be installed by Mason on first run. Run `:checkhealth` to verify.

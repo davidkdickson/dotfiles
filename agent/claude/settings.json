@@ -29,8 +29,7 @@
     ]
   },
   "enabledPlugins": {
-    "sentry@claude-plugins-official": true,
-    "apple-notes@claude-plugins-official": true
+    "sentry@claude-plugins-official": true
   },
   "skipDangerousModePermissionPrompt": true
 }

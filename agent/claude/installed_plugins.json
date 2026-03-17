@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "plugins": {
+    "sentry@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/sentry/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-15T07:29:00.221Z",
+        "lastUpdated": "2026-03-15T07:29:00.221Z",
+        "gitCommitSha": "ec75d7f10719b66da6013d407485ee6b9d53614f"
+      }
+    ]
+  }
+}
