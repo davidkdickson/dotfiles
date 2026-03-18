@@ -43,6 +43,7 @@
         b = branch
         bl = branch --all
         bd = branch -d
+        bD = branch -D
         bpr = fetch --prune
         merged = b --merged
         nomerge = b --no-merge
