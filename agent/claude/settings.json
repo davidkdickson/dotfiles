@@ -55,6 +55,6 @@
   "enabledPlugins": {
     "sentry@claude-plugins-official": true
   },
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true
 }
