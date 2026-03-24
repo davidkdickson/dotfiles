@@ -6,6 +6,9 @@
 |---------------|-----|--------|
 | `<Leader>r` | Neovim (Oil) | Refresh file explorer |
 | `<Leader>h` | Neovim (Oil) | Toggle hidden files |
+| `Ctrl+d` / `Ctrl+u` | Neovim | Jump half-page down / up |
+| `Ctrl+f` / `Ctrl+b` | Neovim | Jump full page forward / back |
+| `{` / `}` | Neovim | Jump to prev / next blank line (paragraph) |
 
 ---
 
