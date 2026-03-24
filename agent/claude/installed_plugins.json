@@ -10,6 +10,26 @@
         "lastUpdated": "2026-03-15T07:29:00.221Z",
         "gitCommitSha": "ec75d7f10719b66da6013d407485ee6b9d53614f"
       }
+    ],
+    "frontend-design@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/frontend-design/61c0597779bd",
+        "version": "61c0597779bd",
+        "installedAt": "2026-03-24T01:51:43.162Z",
+        "lastUpdated": "2026-03-24T01:51:43.162Z",
+        "gitCommitSha": "61c0597779bd2d670dcd4fbbf37c66aa19eb2ce6"
+      }
+    ],
+    "explanatory-output-style@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/explanatory-output-style/61c0597779bd",
+        "version": "61c0597779bd",
+        "installedAt": "2026-03-24T01:52:35.510Z",
+        "lastUpdated": "2026-03-24T01:52:35.510Z",
+        "gitCommitSha": "61c0597779bd2d670dcd4fbbf37c66aa19eb2ce6"
+      }
     ]
   }
 }
