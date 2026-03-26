@@ -40,6 +40,16 @@
         "lastUpdated": "2026-03-29T00:46:57.722Z",
         "gitCommitSha": "eafe962b18f6c5dc70fb7c8cc7e83e61f4cdde06"
       }
+    ],
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/code-review/unknown",
+        "version": "unknown",
+        "installedAt": "2026-03-26T01:00:48.351Z",
+        "lastUpdated": "2026-03-26T01:01:31.630Z",
+        "gitCommitSha": "4b1e2a28ceab32b49b447d6255d6f3c4fa8774de"
+      }
     ]
   }
 }
