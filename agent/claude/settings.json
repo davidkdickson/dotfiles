@@ -46,7 +46,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay /System/Library/Sounds/Glass.aiff"
+            "command": "afplay /System/Library/Sounds/Tink.aiff"
           }
         ]
       }
@@ -55,7 +55,8 @@
   "enabledPlugins": {
     "sentry@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
-    "explanatory-output-style@claude-plugins-official": true
+    "explanatory-output-style@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
   },
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
