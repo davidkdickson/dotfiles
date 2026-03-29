@@ -50,6 +50,25 @@
         "lastUpdated": "2026-03-26T01:01:31.630Z",
         "gitCommitSha": "4b1e2a28ceab32b49b447d6255d6f3c4fa8774de"
       }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6",
+        "version": "5.0.6",
+        "installedAt": "2026-03-26T03:06:07.715Z",
+        "lastUpdated": "2026-03-26T03:06:07.715Z",
+        "gitCommitSha": "eafe962b18f6c5dc70fb7c8cc7e83e61f4cdde06"
+      }
+    ],
+    "claude-md-management@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/claude-md-management/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-26T03:09:17.565Z",
+        "lastUpdated": "2026-03-26T03:09:17.565Z"
+      }
     ]
   }
 }
