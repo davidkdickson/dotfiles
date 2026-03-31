@@ -14,51 +14,41 @@
     "frontend-design@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/frontend-design/unknown",
-        "version": "unknown",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/frontend-design/b091cb4179d3",
+        "version": "b091cb4179d3",
         "installedAt": "2026-03-24T01:51:43.162Z",
-        "lastUpdated": "2026-03-29T00:46:34.754Z",
+        "lastUpdated": "2026-03-31T22:32:53.420Z",
         "gitCommitSha": "61c0597779bd2d670dcd4fbbf37c66aa19eb2ce6"
       }
     ],
     "explanatory-output-style@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/explanatory-output-style/unknown",
-        "version": "unknown",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/explanatory-output-style/1.0.0",
+        "version": "1.0.0",
         "installedAt": "2026-03-24T01:52:35.510Z",
-        "lastUpdated": "2026-03-29T00:46:34.754Z",
+        "lastUpdated": "2026-03-30T00:13:27.916Z",
         "gitCommitSha": "61c0597779bd2d670dcd4fbbf37c66aa19eb2ce6"
       }
     ],
     "superpowers@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6",
-        "version": "5.0.6",
-        "installedAt": "2026-03-29T00:46:57.722Z",
-        "lastUpdated": "2026-03-29T00:46:57.722Z",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7",
+        "version": "5.0.7",
+        "installedAt": "2026-03-26T03:06:07.715Z",
+        "lastUpdated": "2026-03-31T22:32:54.130Z",
         "gitCommitSha": "eafe962b18f6c5dc70fb7c8cc7e83e61f4cdde06"
       }
     ],
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/code-review/unknown",
-        "version": "unknown",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/code-review/b091cb4179d3",
+        "version": "b091cb4179d3",
         "installedAt": "2026-03-26T01:00:48.351Z",
-        "lastUpdated": "2026-03-26T01:01:31.630Z",
+        "lastUpdated": "2026-03-31T22:32:53.419Z",
         "gitCommitSha": "4b1e2a28ceab32b49b447d6255d6f3c4fa8774de"
-      }
-    ],
-    "superpowers@claude-plugins-official": [
-      {
-        "scope": "user",
-        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6",
-        "version": "5.0.6",
-        "installedAt": "2026-03-26T03:06:07.715Z",
-        "lastUpdated": "2026-03-26T03:06:07.715Z",
-        "gitCommitSha": "eafe962b18f6c5dc70fb7c8cc7e83e61f4cdde06"
       }
     ],
     "claude-md-management@claude-plugins-official": [
@@ -66,8 +56,8 @@
         "scope": "user",
         "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/claude-md-management/1.0.0",
         "version": "1.0.0",
-        "installedAt": "2026-03-26T03:09:17.565Z",
-        "lastUpdated": "2026-03-26T03:09:17.565Z"
+        "installedAt": "2026-03-30T22:09:11.656Z",
+        "lastUpdated": "2026-03-30T22:09:11.656Z"
       }
     ]
   }
