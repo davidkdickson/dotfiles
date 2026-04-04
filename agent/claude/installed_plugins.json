@@ -14,10 +14,10 @@
     "frontend-design@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/frontend-design/b091cb4179d3",
-        "version": "b091cb4179d3",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/frontend-design/unknown",
+        "version": "unknown",
         "installedAt": "2026-03-24T01:51:43.162Z",
-        "lastUpdated": "2026-03-31T22:32:53.420Z",
+        "lastUpdated": "2026-04-04T00:29:22.204Z",
         "gitCommitSha": "61c0597779bd2d670dcd4fbbf37c66aa19eb2ce6"
       }
     ],
@@ -44,10 +44,10 @@
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/code-review/b091cb4179d3",
-        "version": "b091cb4179d3",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/code-review/unknown",
+        "version": "unknown",
         "installedAt": "2026-03-26T01:00:48.351Z",
-        "lastUpdated": "2026-03-31T22:32:53.419Z",
+        "lastUpdated": "2026-04-04T00:29:22.204Z",
         "gitCommitSha": "4b1e2a28ceab32b49b447d6255d6f3c4fa8774de"
       }
     ],

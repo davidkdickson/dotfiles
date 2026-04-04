@@ -39,7 +39,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay /Users/daviddickson/.dotfiles/agent/claude/cheers-mate.aiff"
+            "command": "afplay /Users/daviddickson/.dotfiles/agent/claude/sounds/R2D2.aiff"
           }
         ]
       }
