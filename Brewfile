@@ -1,17 +1,31 @@
 cask "ghostty"
-cask "font-monaspace-nerd-font"
+cask "docker-desktop"
+cask "font-monaspice-nerd-font"
+
+brew "git"
+brew "gh"
+brew "git-delta"
 
 brew "starship"
+brew "tmux"
+
 brew "neovim"
 brew "tree-sitter"
 brew "tree-sitter-cli"
+
 brew "node"
-brew "pyenv"
+brew "bun"
+brew "uv"
+
 brew "eza"
 brew "ripgrep"
 brew "zoxide"
 brew "bat"
 brew "fzf"
+
 brew "pgcli"
-brew "git-delta"
-brew "uv"
+brew "dbmate"
+
+brew "awscli"
+brew "terraform"
+brew "tflint"
