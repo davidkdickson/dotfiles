@@ -30,7 +30,8 @@
       "mcp__plugin_sentry_sentry__search_events",
       "mcp__plugin_sentry_sentry__find_organizations",
       "mcp__plugin_sentry_sentry__find_projects"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "hooks": {
     "Notification": [
@@ -51,9 +52,13 @@
     "explanatory-output-style@claude-plugins-official": true,
     "superpowers@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
-    "claude-md-management@claude-plugins-official": true
+    "claude-md-management@claude-plugins-official": true,
+    "context7@claude-plugins-official": true
   },
-  "effortLevel": "high",
+  "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
-  "enableTips": false
+  "skipAutoPermissionPrompt": true,
+  "enableTips": false,
+  "theme": "dark-ansi",
+  "editorMode": "vim"
 }

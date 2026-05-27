@@ -34,10 +34,10 @@
     "superpowers@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.7",
-        "version": "5.0.7",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/superpowers/5.1.0",
+        "version": "5.1.0",
         "installedAt": "2026-03-26T03:06:07.715Z",
-        "lastUpdated": "2026-03-31T22:32:54.130Z",
+        "lastUpdated": "2026-05-20T02:35:58.455Z",
         "gitCommitSha": "eafe962b18f6c5dc70fb7c8cc7e83e61f4cdde06"
       }
     ],
@@ -58,6 +58,15 @@
         "version": "1.0.0",
         "installedAt": "2026-03-30T22:09:11.656Z",
         "lastUpdated": "2026-03-30T22:09:11.656Z"
+      }
+    ],
+    "context7@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/daviddickson/.claude/plugins/cache/claude-plugins-official/context7/unknown",
+        "version": "unknown",
+        "installedAt": "2026-04-15T20:52:36.992Z",
+        "lastUpdated": "2026-04-15T20:52:36.992Z"
       }
     ]
   }
