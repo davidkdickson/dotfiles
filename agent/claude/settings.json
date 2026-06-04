@@ -55,6 +55,9 @@
     "context7@claude-plugins-official": true,
     "cloudflare@claude-plugins-official": true
   },
+  "enabledMcpjsonServers": [
+    "apple-notes"
+  ],
   "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
