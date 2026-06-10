@@ -33,6 +33,9 @@
     ],
     "defaultMode": "auto"
   },
+  "enabledMcpjsonServers": [
+    "apple-notes"
+  ],
   "hooks": {
     "Notification": [
       {
@@ -55,13 +58,11 @@
     "context7@claude-plugins-official": true,
     "cloudflare@claude-plugins-official": true
   },
-  "enabledMcpjsonServers": [
-    "apple-notes"
-  ],
   "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
   "editorMode": "vim",
   "skipAutoPermissionPrompt": true,
-  "enableTips": false
+  "enableTips": false,
+  "model": "claude-fable-5[1m]"
 }
