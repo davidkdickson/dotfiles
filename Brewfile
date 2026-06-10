@@ -1,3 +1,6 @@
+tap "hashicorp/tap"
+tap "oven-sh/bun"
+
 cask "ghostty"
 cask "docker-desktop"
 cask "font-monaspice-nerd-font"
@@ -14,7 +17,7 @@ brew "tree-sitter"
 brew "tree-sitter-cli"
 
 brew "node"
-brew "bun"
+brew "oven-sh/bun/bun"
 brew "uv"
 
 brew "eza"
@@ -27,5 +30,5 @@ brew "pgcli"
 brew "dbmate"
 
 brew "awscli"
-brew "terraform"
+brew "hashicorp/tap/terraform"
 brew "tflint"

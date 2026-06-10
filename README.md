@@ -13,6 +13,8 @@
 
 ## Prerequisites
 ```
+brew trust hashicorp/tap   # third-party taps (terraform, bun) must be trusted
+brew trust oven-sh/bun     # before Homebrew 5.1+ will load or update them
 brew bundle
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
