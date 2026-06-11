@@ -1,3 +1,5 @@
+auto-update = download
+
 theme = Catppuccin Mocha
 
 font-family = MonaspiceNe Nerd Font
