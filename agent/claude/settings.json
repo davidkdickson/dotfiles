@@ -61,6 +61,7 @@
   "effortLevel": "xhigh",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
+  "terminalProgressBarEnabled": false,
   "editorMode": "vim",
   "skipAutoPermissionPrompt": true,
   "enableTips": false,
