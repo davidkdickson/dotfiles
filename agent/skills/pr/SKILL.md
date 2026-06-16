@@ -1,40 +1,49 @@
 ---
 name: pr
-description: Create a concise pull request with conventional commit title, summary, and labels
+description: Open a draft pull request by default; `pr ready` flips it to ready for review (or creates it ready) and watches CI
 disable-model-invocation: true
-allowed-tools: Bash, Read, Grep
+allowed-tools: Bash, Read, Grep, Glob
 ---
 
-# Create PR
+# PR
 
-Create a concise pull request using the following template:
+Manage the pull request for the current branch. Two modes:
 
-# Title - in the format <type>(optional scope): <Title> where the title focuses on the "why" behind the change, not a description of what was changed
-## Summary - one or two sentences on why this change exists (the motivation/problem).
-## Changes - A short bullet list of what changed, only enough to orient a reviewer.
+- **`/pr`** (default) — create a **draft** PR. Drafts keep CI quiet and don't request review.
+- **`/pr ready`** — make the PR ready for review: flip an existing draft (`gh pr ready`),
+  or create it ready-for-review if no PR exists yet, then watch CI.
 
-Also add labels depending on the branch. Labels available are feat, fix and chore. Assign the PR to me.
-The title should be in sentence case.
+## PR template
 
-## Steps
-1. **Derive type from branch prefix**
-   - Read the current branch name (`git branch --show-current`)
-   - Extract the prefix before `/` and use it as the `<type>` in the PR title — do NOT omit or guess it
-   - Valid types:
+- **Title** — `<type>(optional scope): <Title>`, sentence case, focused on the "why"
+  behind the change, not a description of what changed.
+- **Summary** — one or two sentences on why this change exists (the motivation/problem).
+- **Changes** — a short bullet list of what changed, only enough to orient a reviewer.
 
-     | Type    | When to Use                  |
-     | ------- | ---------------------------- |
-     | `feat`  | New features or enhancements |
-     | `fix`   | Regular bug fixes            |
-     | `chore` | Maintenance or cleanup       |
+Derive `<type>` from the branch prefix before `/` — do NOT omit or guess it. Add the
+matching label (`feat`/`fix`/`chore`) **if it exists in the repo**, and assign the PR to
+me. Do NOT include Co-Authored-By or any agent attribution.
 
-2. **Write PR description**
-   - Summarize changes clearly and concisely
-   - Include context and motivation when it makes sense
-   - Do NOT include Co-Authored-By or any agent attribution in the PR description
+| Type    | When to Use                  |
+| ------- | ---------------------------- |
+| `feat`  | New features or enhancements |
+| `fix`   | Regular bug fixes            |
+| `chore` | Maintenance or cleanup       |
 
-3. **Set up PR**
-   - Create PR using `gh pr create` with title in format `<type>(optional scope): <Title>`
-   - Examples: `feat: Add custom analysis skills`, `fix(extraction): Handle null confidence values`, `chore: Drop unused column`
-   - Add appropriate labels (feature, bug or chore)
-   - Assign the PR to me
+## Steps — `/pr` (default, draft)
+
+1. Derive the type from the branch prefix.
+2. Write the PR description (Summary + Changes).
+3. Create the draft PR: `gh pr create --draft` with the conventional title, the matching
+   label if it exists, assigned to me.
+
+## Steps — `/pr ready` (flip to ready)
+
+1. **Preconditions** — ensure local commits are pushed (`git status -sb`); push if ahead.
+2. **Make it ready**
+   - If a draft PR exists for the branch (`gh pr view --json isDraft,number`) → `gh pr ready`.
+   - If it is already ready → report and skip the flip.
+   - If no PR exists → create it ready-for-review (`gh pr create` without `--draft`),
+     using the same title / label / assignee logic as the draft path.
+3. **Watch checks** — hand off to the `watch-pr-checks` skill to monitor the now-running
+   CI (which the flip triggers, since CI skips drafts) and report the result.
