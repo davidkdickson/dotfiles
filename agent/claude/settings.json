@@ -33,6 +33,7 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "opus[1m]",
   "enabledMcpjsonServers": [
     "apple-notes"
   ],
@@ -59,11 +60,12 @@
     "cloudflare@claude-plugins-official": true
   },
   "effortLevel": "xhigh",
+  "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark-ansi",
-  "terminalProgressBarEnabled": false,
   "editorMode": "vim",
+  "terminalProgressBarEnabled": false,
+  "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "enableTips": false,
-  "model": "claude-fable-5[1m]"
+  "enableTips": false
 }
