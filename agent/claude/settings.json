@@ -65,7 +65,7 @@
   "theme": "dark-ansi",
   "editorMode": "vim",
   "terminalProgressBarEnabled": false,
+  "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "enableTips": false,
-  "agentPushNotifEnabled": true
+  "enableTips": false
 }
