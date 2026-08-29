@@ -38,7 +38,7 @@ fi
 #   󰍛 nf-md-memory      context window
 #   󰔟 nf-md-timer_sand  5-hour window
 #   󰃭 nf-md-calendar    7-day window
-#   󰚩 nf-md-robot       model-scoped weekly window (name kept: there can be several)
+#   󰚩 nf-md-robot       model-scoped weekly window (e.g. Fable)
 pct() {
   local icon=$1 label=$2 value=$3 color
   [ -z "$value" ] || [ "$value" = null ] && return
@@ -55,7 +55,7 @@ usage+=$(pct '󰔟' '' "$(echo "$input" | jq -r '.rate_limits.five_hour.used_per
 usage+=$(pct '󰃭' '' "$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')")
 if [ -f "$cache" ]; then
   while IFS=$'\t' read -r name percent; do
-    usage+=$(pct '󰚩' "$(echo "$name" | tr '[:upper:]' '[:lower:]')" "$percent")
+    usage+=$(pct '󰚩' '' "$percent")
   done < <(jq -r '.limits[]? | select(.kind == "weekly_scoped" and .scope.model.display_name) | [.scope.model.display_name, .percent] | @tsv' "$cache" 2>/dev/null)
 fi
 left=$(printf '\033[2m[%s]\033[0m %s' "$model" "$prompt")
