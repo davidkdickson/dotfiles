@@ -53,6 +53,18 @@ if [ -f "$cache" ]; then
     usage+=$(pct "$(echo "$name" | tr '[:upper:]' '[:lower:]')" "$percent")
   done < <(jq -r '.limits[]? | select(.kind == "weekly_scoped" and .scope.model.display_name) | [.scope.model.display_name, .percent] | @tsv' "$cache" 2>/dev/null)
 fi
-[ -n "$usage" ] && usage=$(printf '\033[2m·\033[0m%s' "$usage")
+left=$(printf '\033[2m[%s]\033[0m %s' "$model" "$prompt")
+right=${usage# }
 
-printf '\033[2m[%s]\033[0m %s%s\n' "$model" "$prompt" "$usage"
+# Right-align usage. Claude Code exports COLUMNS from its stdout width when it
+# spawns the status line; fall back to the tty, then tmux. Width is measured on
+# the ANSI-stripped text in a UTF-8 locale so Nerd Font glyphs count as 1.
+visible() { LC_ALL=en_US.UTF-8 bash -c 'printf "%s" "$1" | sed $'"'"'s/\x1b\[[0-9;]*m//g'"'"' | wc -m' _ "$1" | tr -d ' '; }
+width=${COLUMNS:-}
+[ "${width:-0}" -gt 0 ] || width=$(tput cols 2>/dev/null)
+[ "${width:-0}" -gt 0 ] || width=$(tmux display -p '#{pane_width}' 2>/dev/null)
+[ "${width:-0}" -gt 0 ] || width=120
+gap=$(( width - $(visible "$left") - $(visible "$right") ))
+[ "$gap" -ge 2 ] || gap=2
+
+printf '%s%*s%s\n' "$left" "$gap" '' "$right"
