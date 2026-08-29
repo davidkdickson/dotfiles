@@ -1,0 +1,13 @@
+# Starship config for the Claude Code status line. Reuses the same default
+# modules as the shell prompt (starship/starship.toml) so the two match, minus
+# the pieces that only make sense on an interactive prompt.
+add_newline = false
+
+[aws]
+disabled = true
+
+[character]
+disabled = true
+
+[line_break]
+disabled = true
