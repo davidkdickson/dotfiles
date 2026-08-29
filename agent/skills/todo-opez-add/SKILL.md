@@ -19,7 +19,7 @@ Add a single todo item to the "💥 Todo: Opez" Apple Notes note.
    - `outreach` — people, networking, emails
    - `question` — items needing answers from others
 4. Default section to **Someday** unless the user explicitly says "now" or indicates urgency
-5. Rewrite the description to be clear and actionable — include enough context that Claude could complete the task without further clarification (the what, where, and expected behavior)
+5. Write the description as **one short sentence** — a single line, ideally under ~10 words. Keep only the essential what and where; drop background, rationale, acceptance criteria, and implementation detail. If the user gives a long description, compress it; never expand a short one.
 6. Check for duplicates — compare the new item against existing items in both sections. If a semantically similar item already exists (same intent, not just exact text match), show the existing item and ask the user whether to skip, replace, or add anyway
 7. Show the user the formatted item (`- <type>: <description>`) and which section it will go in; ask for confirmation
 8. Once confirmed, append the item to the end of the correct section's `<ul>` list
