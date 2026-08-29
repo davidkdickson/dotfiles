@@ -64,6 +64,9 @@ width=${COLUMNS:-}
 [ "${width:-0}" -gt 0 ] || width=$(tput cols 2>/dev/null)
 [ "${width:-0}" -gt 0 ] || width=$(tmux display -p '#{pane_width}' 2>/dev/null)
 [ "${width:-0}" -gt 0 ] || width=120
+# The status line container is inset from the terminal edge (measured: 5
+# columns in fullscreen mode); anything past it is truncated, not wrapped.
+width=$(( width - 5 ))
 gap=$(( width - $(visible "$left") - $(visible "$right") ))
 [ "$gap" -ge 2 ] || gap=2
 
