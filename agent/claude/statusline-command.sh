@@ -69,7 +69,17 @@ case $effort in
 esac
 state=""
 [ -n "$effort" ] && state=$(printf ' %s󰈸 %s\033[0m' "$fire" "$effort")
-left=$(printf '\033[1;38;2;203;166;247m %s\033[0m%s \033[2min\033[0m %s' "$model" "$state" "$prompt")
+# Vim mode as a single letter on a coloured block (Catppuccin: insert green,
+# normal blue, visual mauve), replacing the built-in "-- INSERT --" line that
+# settings.json hides via statusLine.hideVimModeIndicator.
+vim=$(echo "$input" | jq -r '.vim.mode // empty')
+case $vim in
+  INSERT) mode=$(printf '\033[1;30;48;2;166;227;161m I \033[0m ') ;;
+  NORMAL) mode=$(printf '\033[1;30;48;2;137;180;250m N \033[0m ') ;;
+  VISUAL) mode=$(printf '\033[1;30;48;2;203;166;247m V \033[0m ') ;;
+  *)      mode="" ;;
+esac
+left=$(printf '%s\033[1;38;2;203;166;247m %s\033[0m%s \033[2min\033[0m %s' "$mode" "$model" "$state" "$prompt")
 right=${usage#  }
 
 # Right-align usage. Claude Code exports COLUMNS from its stdout width when it
