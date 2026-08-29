@@ -59,14 +59,14 @@ if [ -f "$cache" ]; then
   done < <(jq -r '.limits[]? | select(.kind == "weekly_scoped" and .scope.model.display_name) | [.scope.model.display_name, .percent] | @tsv' "$cache" 2>/dev/null)
 fi
 # Model segment:  (nf-cod-sparkle) + name in bold Catppuccin mauve, then any
-# non-default session state -- 󱐋 (nf-md-lightning_bolt) when fast mode is on,
-# the effort level when it isn't "high" -- and a dim "in" so it reads like a
-# Starship module ahead of the directory.
+# session state -- the effort level, and 󱐋 (nf-md-lightning_bolt) when fast
+# mode is on -- and a dim "in" so it reads like a Starship module ahead of the
+# directory.
 fast=$(echo "$input" | jq -r '.fast_mode // false')
 effort=$(echo "$input" | jq -r '.effort.level // empty')
 state=""
+[ -n "$effort" ] && state+=" $effort"
 [ "$fast" = true ] && state+=" 󱐋"
-[ -n "$effort" ] && [ "$effort" != high ] && state+=" $effort"
 left=$(printf '\033[1;38;2;203;166;247m %s\033[0m\033[38;2;203;166;247m%s\033[0m \033[2min\033[0m %s' "$model" "$state" "$prompt")
 right=${usage#  }
 
