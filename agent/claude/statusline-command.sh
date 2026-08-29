@@ -59,12 +59,20 @@ if [ -f "$cache" ]; then
   done < <(jq -r '.limits[]? | select(.kind == "weekly_scoped" and .scope.model.display_name) | [.scope.model.display_name, .percent] | @tsv' "$cache" 2>/dev/null)
 fi
 # Model segment:  (nf-cod-sparkle) + name in bold Catppuccin mauve, then any
-# the effort level behind 󰓅 (nf-md-speedometer), and a dim "in" so it reads
+# the effort level as 󰈸 (nf-md-fire) whose colour tracks intensity (Catppuccin:
+# low dim, medium yellow, high peach, xhigh red), and a dim "in" so it reads
 # like a Starship module ahead of the directory.
 effort=$(echo "$input" | jq -r '.effort.level // empty')
+case $effort in
+  low)    fire=$'\033[2m' ;;
+  medium) fire=$'\033[38;2;249;226;175m' ;;
+  high)   fire=$'\033[38;2;250;179;135m' ;;
+  xhigh)  fire=$'\033[1;38;2;243;139;168m' ;;
+  *)      fire="" ;;
+esac
 state=""
-[ -n "$effort" ] && state+=" 󰓅 $effort"
-left=$(printf '\033[1;38;2;203;166;247m %s\033[0m\033[38;2;203;166;247m%s\033[0m \033[2min\033[0m %s' "$model" "$state" "$prompt")
+[ -n "$effort" ] && state=$(printf ' %s󰈸 %s\033[0m' "$fire" "$effort")
+left=$(printf '\033[1;38;2;203;166;247m %s\033[0m%s \033[2min\033[0m %s' "$model" "$state" "$prompt")
 right=${usage#  }
 
 # Right-align usage. Claude Code exports COLUMNS from its stdout width when it
