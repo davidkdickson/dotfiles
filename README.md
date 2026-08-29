@@ -38,6 +38,8 @@ ln -s ~/.dotfiles/agent/commands ~/.cursor/commands
 ln -s ~/.dotfiles/agent/skills ~/.claude/skills
 ln -s ~/.dotfiles/agent/claude/settings.json ~/.claude/settings.json
 ln -s ~/.dotfiles/agent/claude/keybindings.json ~/.claude/keybindings.json
+ln -s ~/.dotfiles/agent/claude/statusline-command.sh ~/.claude/statusline-command.sh
+ln -s ~/.dotfiles/agent/claude/statusline.toml ~/.claude/statusline.toml
 ln -s ~/.dotfiles/agent/claude/known_marketplaces.json ~/.claude/plugins/known_marketplaces.json
 ln -s ~/.dotfiles/agent/claude/installed_plugins.json ~/.claude/plugins/installed_plugins.json
 ln -s ~/.dotfiles/agent/claude/.mcp.json ~/.mcp.json
