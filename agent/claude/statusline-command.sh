@@ -59,16 +59,13 @@ if [ -f "$cache" ]; then
   done < <(jq -r '.limits[]? | select(.kind == "weekly_scoped" and .scope.model.display_name) | [.scope.model.display_name, .percent] | @tsv' "$cache" 2>/dev/null)
 fi
 # Model segment:  (nf-cod-sparkle) + name in bold Catppuccin mauve, then any
-# the effort level as 󰈸 (nf-md-fire) whose colour tracks intensity (Catppuccin:
-# low dim, medium yellow, high peach, xhigh red), and a dim "in" so it reads
-# like a Starship module ahead of the directory.
+# the effort level as 󰈸 (nf-md-fire): dim at or below the default (high), bold
+# Catppuccin red when turned up to xhigh, and a dim "in" so it reads like a
+# Starship module ahead of the directory.
 effort=$(echo "$input" | jq -r '.effort.level // empty')
 case $effort in
-  low)    fire=$'\033[2m' ;;
-  medium) fire=$'\033[38;2;249;226;175m' ;;
-  high)   fire=$'\033[38;2;250;179;135m' ;;
-  xhigh)  fire=$'\033[1;38;2;243;139;168m' ;;
-  *)      fire="" ;;
+  xhigh) fire=$'\033[1;38;2;243;139;168m' ;;
+  *)     fire=$'\033[2m' ;;
 esac
 state=""
 [ -n "$effort" ] && state=$(printf ' %s󰈸 %s\033[0m' "$fire" "$effort")
