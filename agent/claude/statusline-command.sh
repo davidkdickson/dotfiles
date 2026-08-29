@@ -67,7 +67,13 @@ width=${COLUMNS:-}
 # The status line container is inset from the terminal edge (measured: 5
 # columns in fullscreen mode); anything past it is truncated, not wrapped.
 width=$(( width - 5 ))
-gap=$(( width - $(visible "$left") - $(visible "$right") ))
-[ "$gap" -ge 2 ] || gap=2
-
-printf '%s%*s%s\n' "$left" "$gap" '' "$right"
+lw=$(visible "$left"); rw=$(visible "$right")
+if [ -z "$right" ]; then
+  printf '%s\n' "$left"
+elif [ $(( lw + 2 + rw )) -le "$width" ]; then
+  printf '%s%*s%s\n' "$left" "$(( width - lw - rw ))" '' "$right"
+else
+  # Too narrow (e.g. a split tmux pane): usage goes on its own line, still
+  # right-aligned, rather than being truncated off the end.
+  printf '%s\n%*s%s\n' "$left" "$(( width - rw > 0 ? width - rw : 0 ))" '' "$right"
+fi
