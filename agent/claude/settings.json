@@ -33,7 +33,7 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5[1m]",
+  "model": "fable",
   "enabledMcpjsonServers": [
     "apple-notes"
   ],
@@ -59,6 +59,8 @@
     "context7@claude-plugins-official": true,
     "skill-creator@claude-plugins-official": true
   },
+  "outputStyle": "Concise",
+  "spinnerTipsEnabled": true,
   "effortLevel": "high",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
@@ -68,7 +70,5 @@
   "terminalProgressBarEnabled": false,
   "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
-  "enableTips": false,
-  "outputStyle": "Concise"
+  "skipAutoPermissionPrompt": true
 }
