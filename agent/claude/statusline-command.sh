@@ -33,28 +33,33 @@ if [ ! -f "$cache" ] || [ "$(( $(date +%s) - $(stat -f %m "$cache") ))" -gt 60 ]
   refresh_usage >/dev/null 2>&1 &
 fi
 
-# Colour a percentage: green < 50, yellow < 80, red otherwise.
+# One usage segment: a Nerd Font icon (1 cell), optional label, and the
+# percentage coloured green < 50, yellow < 80, red otherwise.
+#   󰍛 nf-md-memory      context window
+#   󰔟 nf-md-timer_sand  5-hour window
+#   󰃭 nf-md-calendar    7-day window
+#   󰚩 nf-md-robot       model-scoped weekly window (name kept: there can be several)
 pct() {
-  local label=$1 value=$2 color
+  local icon=$1 label=$2 value=$3 color
   [ -z "$value" ] || [ "$value" = null ] && return
   value=${value%.*}
   if [ "$value" -ge 80 ]; then color='1;31'
   elif [ "$value" -ge 50 ]; then color='1;33'
   else color='1;32'; fi
-  printf ' \033[2m%s\033[0m \033[%sm%s%%\033[0m' "$label" "$color" "$value"
+  printf '  \033[2m%s%s\033[0m \033[%sm%s%%\033[0m' "$icon" "${label:+ $label}" "$color" "$value"
 }
 
 usage=""
-usage+=$(pct ctx "$(echo "$input" | jq -r '.context_window.used_percentage // empty')")
-usage+=$(pct 5h  "$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')")
-usage+=$(pct 7d  "$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')")
+usage+=$(pct '󰍛' '' "$(echo "$input" | jq -r '.context_window.used_percentage // empty')")
+usage+=$(pct '󰔟' '' "$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')")
+usage+=$(pct '󰃭' '' "$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')")
 if [ -f "$cache" ]; then
   while IFS=$'\t' read -r name percent; do
-    usage+=$(pct "$(echo "$name" | tr '[:upper:]' '[:lower:]')" "$percent")
+    usage+=$(pct '󰚩' "$(echo "$name" | tr '[:upper:]' '[:lower:]')" "$percent")
   done < <(jq -r '.limits[]? | select(.kind == "weekly_scoped" and .scope.model.display_name) | [.scope.model.display_name, .percent] | @tsv' "$cache" 2>/dev/null)
 fi
 left=$(printf '\033[2m[%s]\033[0m %s' "$model" "$prompt")
-right=${usage# }
+right=${usage#  }
 
 # Right-align usage. Claude Code exports COLUMNS from its stdout width when it
 # spawns the status line; fall back to the tty, then tmux. Widths are measured
