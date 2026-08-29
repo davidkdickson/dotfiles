@@ -57,15 +57,18 @@
     "code-review@claude-plugins-official": true,
     "claude-md-management@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
-    "cloudflare@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true
   },
-  "effortLevel": "xhigh",
+  "outputStyle": "Concise",
+  "spinnerTipsEnabled": true,
+  "effortLevel": "high",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
   "theme": "dark-ansi",
   "editorMode": "vim",
   "terminalProgressBarEnabled": false,
+  "remoteControlAtStartup": false,
   "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
-  "enableTips": false
+  "skipAutoPermissionPrompt": true
 }

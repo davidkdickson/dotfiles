@@ -39,6 +39,8 @@ The note should have two sections with typed, bulleted items:
 - <type>: <description>
 ```
 
+Descriptions are **one short sentence** — a single line, ideally under ~10 words.
+
 ## Steps
 
 1. Read the note named "💥 Todo: Opez" using `mcp__apple-notes__get_note_content`
@@ -47,6 +49,7 @@ The note should have two sections with typed, bulleted items:
    - Format each item as `- <type>: <description>`
    - Classify each item into one of the 5 types based on its content
    - Items that don't clearly belong in **Now** default to **Someday**
+   - Compress each description to **one short sentence** — a single line, ideally under ~10 words. Keep only the essential what and where; drop background, rationale, acceptance criteria, and implementation detail
    - Preserve the meaning of every item — do not drop or merge items
 3. Show the user a before/after comparison so they can see what changed
 4. Ask the user to confirm before proceeding
