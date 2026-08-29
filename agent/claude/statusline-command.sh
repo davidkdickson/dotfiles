@@ -57,9 +57,9 @@ left=$(printf '\033[2m[%s]\033[0m %s' "$model" "$prompt")
 right=${usage# }
 
 # Right-align usage. Claude Code exports COLUMNS from its stdout width when it
-# spawns the status line; fall back to the tty, then tmux. Width is measured on
-# the ANSI-stripped text in a UTF-8 locale so Nerd Font glyphs count as 1.
-visible() { LC_ALL=en_US.UTF-8 bash -c 'printf "%s" "$1" | sed $'"'"'s/\x1b\[[0-9;]*m//g'"'"' | wc -m' _ "$1" | tr -d ' '; }
+# spawns the status line; fall back to the tty, then tmux. Widths are measured
+# in terminal cells: emoji (e.g. Starship's 🐍) are 2 cells, Nerd Font glyphs
+# 1, combining marks / variation selectors 0 -- `wc -m` gets all of these wrong.
 width=${COLUMNS:-}
 [ "${width:-0}" -gt 0 ] || width=$(tput cols 2>/dev/null)
 [ "${width:-0}" -gt 0 ] || width=$(tmux display -p '#{pane_width}' 2>/dev/null)
@@ -67,7 +67,18 @@ width=${COLUMNS:-}
 # The status line container is inset from the terminal edge (measured: 5
 # columns in fullscreen mode); anything past it is truncated, not wrapped.
 width=$(( width - 5 ))
-lw=$(visible "$left"); rw=$(visible "$right")
+read -r lw rw < <(python3 -c '
+import sys, re, unicodedata
+ansi = re.compile(r"\x1b\[[0-9;]*m")
+def cells(s):
+    n = 0
+    for ch in ansi.sub("", s):
+        if unicodedata.combining(ch) or ch in "\u200b\u200d\ufe0e\ufe0f":
+            continue
+        n += 2 if unicodedata.east_asian_width(ch) in "WF" else 1
+    return n
+print(cells(sys.argv[1]), cells(sys.argv[2]))
+' "$left" "$right")
 if [ -z "$right" ]; then
   printf '%s\n' "$left"
 elif [ $(( lw + 2 + rw )) -le "$width" ]; then
