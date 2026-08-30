@@ -1,7 +1,7 @@
 #!/bin/bash
 # Claude Code statusline: model name + the Starship prompt rendered for the
 # current workspace (so it matches the shell prompt: icons, colors, git state)
-# + usage: context window fill, the 5h / 7d rate-limit windows, and any
+# + usage: context window fill, the 5h / 7d rate-limit windows (with their\n# local reset time / day), and any
 # model-scoped weekly windows (e.g. Fable) that /usage shows.
 
 input=$(cat)
@@ -40,19 +40,38 @@ fi
 #   󰃭 nf-md-calendar    7-day window
 #   󰚩 nf-md-robot       model-scoped weekly window (e.g. Fable)
 pct() {
-  local icon=$1 label=$2 value=$3 color
+  local icon=$1 label=$2 value=$3 reset=$4 color
   [ -z "$value" ] || [ "$value" = null ] && return
   value=${value%.*}
   if [ "$value" -ge 80 ]; then color='1;31'
   elif [ "$value" -ge 50 ]; then color='1;33'
   else color='1;32'; fi
   printf '  \033[2m%s%s\033[0m \033[%sm%s%%\033[0m' "$icon" "${label:+ $label}" "$color" "$value"
+  [ -n "$reset" ] && printf ' \033[2m\xe2\x86\xbb%s\033[0m' "$reset"
+  return 0
+}
+
+# Reset time for a rate-limit window, rendered in local time (%H:%M for the
+# 5h window, weekday for the 7d one). The statusline payload carries it as
+# epoch seconds ($1); fall back to the cached OAuth payload's ISO8601 UTC
+# field ($2) when absent (e.g. before the first API response).
+reset_at() {
+  local epoch iso
+  epoch=$(echo "$input" | jq -r "$1 // empty")
+  if [ -z "$epoch" ]; then
+    iso=$(jq -r "$2 // empty" "$cache" 2>/dev/null)
+    [ -n "$iso" ] || return
+    epoch=$(date -juf '%Y-%m-%dT%H:%M:%S' "${iso%%.*}" +%s 2>/dev/null) || return
+  fi
+  date -r "${epoch%.*}" +"$3" 2>/dev/null
 }
 
 usage=""
+five_reset=$(reset_at '.rate_limits.five_hour.resets_at' '.five_hour.resets_at' '%H:%M')
+week_reset=$(reset_at '.rate_limits.seven_day.resets_at' '.seven_day.resets_at' '%a')
 usage+=$(pct '󰍛' '' "$(echo "$input" | jq -r '.context_window.used_percentage // empty')")
-usage+=$(pct '󰔟' '' "$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')")
-usage+=$(pct '󰃭' '' "$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')")
+usage+=$(pct '󰔟' '' "$(echo "$input" | jq -r '.rate_limits.five_hour.used_percentage // empty')" "$five_reset")
+usage+=$(pct '󰃭' '' "$(echo "$input" | jq -r '.rate_limits.seven_day.used_percentage // empty')" "$week_reset")
 if [ -f "$cache" ]; then
   while IFS=$'\t' read -r name percent; do
     usage+=$(pct '󰚩' '' "$percent")
