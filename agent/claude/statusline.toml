@@ -11,3 +11,9 @@ disabled = true
 
 [line_break]
 disabled = true
+
+[bun]
+disabled = true
+
+[python]
+disabled = true
