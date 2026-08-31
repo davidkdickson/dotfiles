@@ -3,3 +3,9 @@
 
 [aws]
 disabled = true
+
+[bun]
+disabled = true
+
+[python]
+disabled = true
