@@ -1,7 +1,6 @@
 ---
 name: branch
 description: Create a local git branch using best practices and conventional branch naming
-disable-model-invocation: true
 allowed-tools: Bash
 ---
 

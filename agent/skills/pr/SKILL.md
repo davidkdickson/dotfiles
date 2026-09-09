@@ -1,7 +1,6 @@
 ---
 name: pr
 description: Open a draft pull request by default; `pr ready` flips it to ready for review (or creates it ready) and watches CI
-disable-model-invocation: true
 allowed-tools: Bash, Read, Grep, Glob
 ---
 

@@ -1,7 +1,6 @@
 ---
 name: watch-deploy
 description: Watch the most recent Deploy workflow run and notify when it completes
-disable-model-invocation: true
 allowed-tools: Bash
 ---
 

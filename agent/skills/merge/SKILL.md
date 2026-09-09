@@ -1,7 +1,6 @@
 ---
 name: merge
 description: Squash merge the current PR, switch to main, and clean up the local branch
-disable-model-invocation: true
 allowed-tools: Bash
 ---
 

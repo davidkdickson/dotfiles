@@ -1,7 +1,6 @@
 ---
 name: review
 description: Review the current diff for bugs, security issues, and code quality concerns
-disable-model-invocation: true
 allowed-tools: Bash, Read, Grep, Glob
 ---
 
