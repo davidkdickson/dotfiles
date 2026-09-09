@@ -25,7 +25,7 @@ No build, lint, or test commands exist — this is a configuration-only repo.
 - **starship/** — Shell prompt config
 - **pgcli/** — PostgreSQL client config
 - **macos/** — launchd plist to remap Caps Lock to Control
-- **agent/** — Shared workflow skills/commands for Codex and Cursor IDE, symlinked to `~/.Codex/skills` and `~/.cursor/commands`
+- **agent/** — Shared workflow skills for Claude Code and Codex, symlinked to `~/.claude/skills` and `~/.agents/skills`
 
 ## Conventions
 

@@ -1,7 +1,6 @@
 ---
 name: commit
 description: Create a well-structured git commit using the Conventional Commits specification
-disable-model-invocation: true
 allowed-tools: Bash
 ---
 

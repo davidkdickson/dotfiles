@@ -9,7 +9,7 @@
 - **starship** - Starship prompt config
 - **pgcli** - PostgreSQL client config (pgcli)
 - **macos** - macOS system config (Caps Lock remap via launchd)
-- **agent** - Shared skills/commands for Claude Code and Cursor
+- **agent** - Shared skills for Claude Code and Codex
 
 ## Prerequisites
 ```
@@ -34,8 +34,9 @@ ln -s ~/.dotfiles/pgcli/config ~/.config/pgcli/config
 ln -s ~/.dotfiles/ghostty/config ~/Library/Application\ Support/com.mitchellh.ghostty/config
 ln -s ~/.dotfiles/starship/starship.toml ~/.config/starship.toml
 ln -s ~/.dotfiles/macos/com.user.remapCapsLock.plist ~/Library/LaunchAgents/com.user.remapCapsLock.plist
-ln -s ~/.dotfiles/agent/commands ~/.cursor/commands
 ln -s ~/.dotfiles/agent/skills ~/.claude/skills
+mkdir -p ~/.agents
+ln -s ~/.dotfiles/agent/skills ~/.agents/skills
 ln -s ~/.dotfiles/agent/claude/settings.json ~/.claude/settings.json
 ln -s ~/.dotfiles/agent/claude/keybindings.json ~/.claude/keybindings.json
 ln -s ~/.dotfiles/agent/claude/statusline-command.sh ~/.claude/statusline-command.sh
@@ -44,5 +45,7 @@ ln -s ~/.dotfiles/agent/claude/known_marketplaces.json ~/.claude/plugins/known_m
 ln -s ~/.dotfiles/agent/claude/installed_plugins.json ~/.claude/plugins/installed_plugins.json
 ln -s ~/.dotfiles/agent/claude/.mcp.json ~/.mcp.json
 ```
+
+Claude Code and Codex share the skills in `agent/skills` through the symlinks above. Codex discovers personal skills in `~/.agents/skills`. Restart Codex if the skills don't appear; in the CLI, use `/skills` to list them or `$skill-name` to invoke one. See the [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills).
 
 Launch `nvim` and plugins will install automatically via lazy.nvim. LSP servers (pyright, ts_ls, bashls) will be installed by Mason on first run. Run `:checkhealth` to verify.

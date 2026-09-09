@@ -1,7 +1,6 @@
 ---
 name: watch-pr-checks
 description: Watch the current pull request's checks and notify when they complete
-disable-model-invocation: true
 allowed-tools: Bash
 ---
 
