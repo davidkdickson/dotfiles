@@ -9,7 +9,7 @@
 - **starship** - Starship prompt config
 - **pgcli** - PostgreSQL client config (pgcli)
 - **macos** - macOS system config (Caps Lock remap via launchd)
-- **agent** - Shared skills for Claude Code and Codex
+- **agent** - Claude Code and Codex settings, plus shared skills
 
 ## Prerequisites
 ```
@@ -47,5 +47,18 @@ ln -s ~/.dotfiles/agent/claude/.mcp.json ~/.mcp.json
 ```
 
 Claude Code and Codex share the skills in `agent/skills` through the symlinks above. Codex discovers personal skills in `~/.agents/skills`. Restart Codex if the skills don't appear; in the CLI, use `/skills` to list them or `$skill-name` to invoke one. See the [Codex skills documentation](https://learn.chatgpt.com/docs/build-skills).
+
+Codex defaults live in `agent/codex/config.toml`: high reasoning effort, concise output, automatic approval review within a workspace-write sandbox, live web search, fullscreen terminal UI, Vim mode, and a native status line. The model remains the Codex default or your current selection. Apple Notes uses the same locally installed Claude Desktop extension as the Claude config.
+
+The Codex config also includes this machine’s desktop plugins, browser/computer-use runtime, notification hook, and trusted projects. To install it when no `~/.codex/config.toml` exists:
+
+```bash
+mkdir -p ~/.codex
+ln -s ~/.dotfiles/agent/codex/config.toml ~/.codex/config.toml
+```
+
+For an existing installation, back up `~/.codex/config.toml` and preserve any additional local settings in the repo config before replacing the original with the symlink above. This machine’s existing settings have already been merged. Changes through the symlink update the repository file; review app-generated changes before committing. Runtime paths may need updating on another machine or after app upgrades.
+
+The optional `notify` command plays the same R2-D2 sound as Claude; enable it only when no app-managed notification command needs to be preserved. Claude-specific plugins and permission allowlists are not copied into Codex. Terminal colors continue to come from the terminal configuration. See the [official Codex configuration reference](https://learn.chatgpt.com/docs/config-file/config-reference).
 
 Launch `nvim` and plugins will install automatically via lazy.nvim. LSP servers (pyright, ts_ls, bashls) will be installed by Mason on first run. Run `:checkhealth` to verify.
