@@ -58,6 +58,7 @@ CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 # Existing desktop integrations and project state. Paths are machine-specific.
 [desktop]
 followUpQueueMode = "steer"
+conversationDetailMode = "STEPS_PROSE"
 
 [marketplaces.openai-bundled]
 source_type = "local"
